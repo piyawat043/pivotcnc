@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>กระบวนการออกแบบเพื่อการทำซ้ำอย่างสมบูรณ์ (Piyawat Zero Reference System)</title>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-N2C778T4KC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <title>The Pivot Standard (มาตรฐานปิยวัฒน์)</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2C778T4KC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-N2C778T4KC');
-</script>
+      gtag('config', 'G-N2C778T4KC');
+    </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-	    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -24,6 +24,11 @@
         }
         .gradient-text {
             background: linear-gradient(to right, #4ade80, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-text-gold {
+            background: linear-gradient(to right, #d4af37, #b8860b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -57,35 +62,37 @@
 <body class="bg-white text-gray-800 antialiased">
 
 
-<!-- Header / Hero Section with Video Background -->
 <header class="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
-    <!-- Video Background -->
     <video autoplay loop muted playsinline class="header-video opacity-300">
         <source src="bggok.mp4" type="video/mp4">
         เบราว์เซอร์ของคุณไม่รองรับวิดีโอแท็ก
     </video>
 
-    <!-- Overlay for text readability -->
-    <div class="absolute inset-0 bg-white/80"></div>
+    <div class="absolute inset-0 bg-white/85"></div>
 
-    <!-- Header Content -->
-    <div class="relative z-10 text-center max-w-4xl mx-auto px-4">
+    <div class="relative z-10 text-center max-w-5xl mx-auto px-4">
         
-        <!-- Your Logo -->
-        <img src="mc005mini02.png" alt="Maker Customs Logo" class="mx-auto mb-8 w-32 h-32 md:w-32 md:h-32 object-contain" onerror="this.style.display='none'">
+        <img src="mc005mini02.png" alt="Maker Customs Logo" class="mx-auto mb-6 w-32 h-32 md:w-32 md:h-32 object-contain" onerror="this.style.display='none'">
 
-        <div class="inline-block bg-blue-50 text-blue-900 px-4 py-1 rounded-full text-sm font-medium mb-4 border border-blue-200">
-            มาตรฐานใหม่ของการออกแบบเพื่ออนาคต
+        <div class="inline-block bg-blue-50 text-blue-900 px-4 py-1 rounded-full text-sm font-medium mb-4 border border-blue-200 tracking-wider uppercase">
+            Datum-Based Evolutionary Design
         </div>
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-blue-900 leading-tight">
-            <span class="gradient-text">กระบวนการออกแบบเพื่อการทำซ้ำอย่างสมบูรณ์</span>
+        
+        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-blue-900 leading-tight">
+            THE <span class="gradient-text">PIVOT</span> STANDARD
         </h1>
-        <p class="mt-6 text-lg md:text-xl text-gray-700 max-w-2xl mx-auto">
-            ZERO ไม่ใช่แค่จุด... แต่มันคือ "ระบบ" ที่จะเปลี่ยนวิธีคิดในการออกแบบ, ผลิต, และพัฒนางานของคุณไปตลอดกาล
+        <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mt-2">
+            (มาตรฐานปิยวัฒน์)
+        </h2>
+
+        <p class="mt-8 text-lg md:text-2xl text-gray-700 max-w-3xl mx-auto font-light leading-relaxed">
+            เปลี่ยน <b>"วัตถุตาย"</b> ให้เป็น <b>"วัตถุอมตะ"</b> <br>
+            ด้วยภาษากลางของการออกแบบ ที่ทำให้คุณแก้ไข ทำซ้ำ <br class="hidden md:inline">และพัฒนางานเดิมได้ไม่รู้จบ
         </p>
+
         <div class="mt-10">
-            <a href="#problem" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105 shadow-md">
-                ค้นพบแนวคิด
+            <a href="#concept" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-xl">
+                รู้จักระบบ Pivot
             </a>
         </div>
     </div>
@@ -93,55 +100,72 @@
 
 
 <main>
-    <!-- Problem Section -->
+    <section id="concept" class="bg-blue-900 text-white section px-4">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">ทำไมต้อง "Pivot"? (ปี-วัด)</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center text-left">
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold text-green-400">ในทางสากล 🌍</h3>
+                    <p class="text-lg text-blue-100">
+                        <b>Pivot</b> คือจุดหมุนที่มั่นคง แต่ยอมให้ทุกอย่างรอบตัวปรับเปลี่ยนทิศทางได้... 
+                        ระบบนี้จึงไม่ใช่แค่การผลิตให้จบ แต่คือการสร้างฐานรากเพื่อให้ชิ้นงาน <b>"พลิกแพลง"</b> และ <b>"ไปต่อ"</b> ได้เสมอ
+                    </p>
+                </div>
+                <div class="space-y-4 border-l-2 border-blue-700 pl-8">
+                    <h3 class="text-2xl font-bold text-yellow-400">ในทางภาษาไทย 🇹🇭</h3>
+                    <p class="text-lg text-blue-100">
+                        <b>"ปิยวัฒน์"</b> (ปิยะ+วัฒนะ) หมายถึง ความเจริญงอกงามอันเป็นที่รัก... 
+                        นี่คือมาตรฐานที่ใส่จิตวิญญาณของผู้สร้างลงไป เพื่อให้งานทุกชิ้นเกิดการ <b>"พัฒนา"</b> อย่างไม่มีที่สิ้นสุด
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="problem" class="bg-white section px-4 text-gray-800">
         <div class="container mx-auto max-w-5xl">
             <div class="text-center">
                 <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
-                    🚨 ปัญหาที่ทุกคนเจอ (แต่ไม่มีใครพูดถึง)
+                    🚨 Dead Object vs. Living Object
                 </h2>
                 <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
-                    "ทำไมเราต้องเริ่มใหม่ทุกครั้งที่จะแก้งาน?" คำถามง่ายๆ ที่นำไปสู่การค้นพบความซับซ้อนและความซ้ำซ้อนในกระบวนการทำงานแบบเดิมๆ
+                    โลกเก่าสร้างชิ้นงานที่ "ตายแล้ว" (Fixed) แก้ไขไม่ได้... แต่โลกใหม่สร้างชิ้นงานที่ "มีชีวิต" (Adaptive)
                 </p>
             </div>
             
             <div class="mt-12 grid md:grid-cols-2 gap-8 items-start">
                 
-                <!-- Card: แบบเดิม -->
-                <div class="bg-blue-900/90 p-6 rounded-lg border border-blue-800 flex flex-col h-full text-white">
-                    <!-- Video for "แบบเดิม" -->
-                    <div class="mb-4 rounded-lg overflow-hidden">
-                        <video autoplay loop muted playsinline class="w-full h-auto" src="vise.mp4" onerror="this.parentElement.innerHTML = '<div class=\'bg-blue-800 aspect-video w-full flex items-center justify-center rounded-lg\'><p class=\'text-blue-200\'>ไม่พบวิดีโอ</p></div>';">
-                            เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
+                <div class="bg-gray-100 p-6 rounded-2xl border border-gray-300 flex flex-col h-full">
+                    <div class="mb-4 rounded-lg overflow-hidden relative">
+                         <video autoplay loop muted playsinline class="w-full h-auto grayscale opacity-80" src="vise.mp4" onerror="this.parentElement.innerHTML = '<div class=\'bg-gray-300 aspect-video w-full flex items-center justify-center rounded-lg\'><p class=\'text-gray-500\'>Traditional Method</p></div>';">
                         </video>
+                        <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Dead Object</div>
                     </div>
-                    <h3 class="text-xl font-semibold text-red-300">
-                        แบบเดิม: วุ่นวายและซับซ้อน
+                    <h3 class="text-xl font-bold text-gray-700">
+                        แบบเดิม: ผลิตแล้วจบ (แก้ไข = พัง)
                     </h3>
-                    <ul class="mt-4 space-y-3 text-blue-100">
-                        <li>❌ ต้องอธิบายรายละเอียดทั้งหมดเมื่อส่งงาน</li>
-                        <li>⏱️ เสียเวลาตั้งค่างานใหม่ทุกครั้งที่แก้ไข</li>
-                        <li>⚠️ เสี่ยงต่อความผิดพลาดในการสื่อสาร</li>
-                        <li>🛑 การพัฒนาต่อยอดทำได้ยาก กลายเป็นภาระ</li>
+                    <ul class="mt-4 space-y-3 text-gray-600">
+                        <li>❌ แกะงานออกแล้ว ศูนย์หายทันที</li>
+                        <li>❌ ถ้างานผิดพลาด = ต้องทิ้ง (Scrap)</li>
+                        <li>❌ เป็นวัตถุที่ตายตัว พัฒนาต่อไม่ได้</li>
+                        <li>🛑 "ความแม่นยำ" จบลงที่ขั้นตอนการผลิต</li>
                     </ul>
                 </div>
                 
-                <!-- Card: แบบใหม่ -->
-                <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 flex flex-col h-full text-blue-900">
-                    <!-- Video for "แบบใหม่" -->
-                    <div class="mb-4 rounded-lg overflow-hidden">
-                        <video autoplay loop muted playsinline class="w-full h-auto" src="new3dprobeaa.mp4" onerror="this.parentElement.innerHTML = '<div class=\'bg-blue-100 aspect-video w-full flex items-center justify-center rounded-lg\'><p class=\'text-blue-500\'>ไม่พบวิดีโอ</p></div>';">
-                            เบราว์เซอร์ของคุณไม่รองรับวิดีโอ
+                <div class="bg-blue-50 p-6 rounded-2xl border-2 border-blue-400 flex flex-col h-full shadow-lg transform md:-translate-y-4">
+                    <div class="mb-4 rounded-lg overflow-hidden relative">
+                         <video autoplay loop muted playsinline class="w-full h-auto" src="new3dprobeaa.mp4" onerror="this.parentElement.innerHTML = '<div class=\'bg-blue-100 aspect-video w-full flex items-center justify-center rounded-lg\'><p class=\'text-blue-500\'>Pivot System</p></div>';">
                         </video>
+                        <div class="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Living Object</div>
                     </div>
-                    <h3 class="text-xl font-semibold text-green-600">
-                        แบบใหม่: ด้วย Zero System
+                    <h3 class="text-xl font-bold text-blue-900">
+                        แบบ Pivot: วัตถุที่มีชีวิต
                     </h3>
-                    <ul class="mt-4 space-y-3 text-blue-800">
-                        <li>✅ บอกแค่ว่า "วัด 6 จุดได้เลย"</li>
-                        <li>⚡ แก้ไขงานได้ทันที ไม่ต้องตั้งค่าใหม่</li>
-                        <li>🎯 ลดความผิดพลาด ใช้ชิ้นงานเป็นภาษากลาง</li>
-                        <li>🚀 พัฒนาต่อยอดได้อย่างไม่มีขีดจำกัด</li>
+                    <ul class="mt-4 space-y-3 text-blue-800 font-medium">
+                        <li>✅ แกะออกแล้วใส่กลับเข้าไป ศูนย์เดิมเป๊ะ 100%</li>
+                        <li>✅ งานผิดพลาด = แก้ไขได้ (Reworkable)</li>
+                        <li>✅ อัปเกรดชิ้นงานเดิมได้ตลอดเวลา</li>
+                        <li>🚀 "ความแม่นยำ" เริ่มต้นใหม่ได้เสมอเมื่อต้องการ</li>
                     </ul>
                 </div>
 
@@ -149,94 +173,95 @@
         </div>
     </section>
 
-<!-- Solution Section -->
 <section id="solution" class="section px-4 bg-white text-gray-800">
     <div class="container mx-auto max-w-5xl text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
-            💡 Piyawat Zero Reference System คืออะไร?
+            💡 The Pivot Standard คืออะไร?
         </h2>
         <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
-            มันคือ "ภาษากลางของการออกแบบเพื่ออนาคต" ด้วยแนวคิดที่เรียบง่ายจนน่าทึ่ง:
+            มันคือนิยามใหม่ของการออกแบบเชิงวิศวกรรม (Engineering Design Protocol)
         </p>
-        <div class="mt-8 bg-blue-50 p-8 rounded-lg border border-blue-200 inline-block shadow">
-            <p class="text-xl md:text-2xl font-semibold text-blue-900">
-                "ออกแบบอะไรก็ได้ ขอแค่วาง 
-                <span class="gradient-text font-bold">'เหลี่ยม'</span> 
-                หรือ 
-                <span class="gradient-text font-bold">'ขอบวัด 6 จุด'</span> 
-                ไว้ในชิ้นงาน"
+        <div class="mt-8 bg-gradient-to-r from-blue-50 to-white p-10 rounded-2xl border border-blue-100 inline-block shadow-xl">
+            <p class="text-xl md:text-2xl font-semibold text-blue-900 leading-relaxed">
+                "เราไม่ได้แค่ออกแบบรูปทรง... <br>
+                แต่เราฝัง <span class="gradient-text font-bold text-3xl">'จุดกำเนิด' (Pivot Points)</span> <br>
+                ลงไปใน DNA ของชิ้นงาน เพื่อให้มันกลับมาเกิดใหม่ได้เสมอ"
             </p>
         </div>
-        <div class="mt-8">
-            <!-- Diagram Image -->
-            <div class="w-full max-w-2xl mx-auto bg-blue-50 p-2 rounded-lg border border-blue-200 shadow">
-                <img src="04072025PMZ8.png" alt="ไดอะแกรม Piyawat Zero Reference System" class="rounded-md w-full h-auto shadow-lg">
-            </div>
-        </div>
-
-<section id="story" class="section px-4 bg-white text-gray-800">
-    <div class="container mx-auto max-w-6xl">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
-                📖 เรื่องราวของ 2 ชิ้นงาน: ความแตกต่างที่มองไม่เห็น
-            </h2>
-            <p class="mt-4 text-lg text-gray-700">
-                เมื่อชิ้นงานที่หน้าตาเหมือนกัน กลับมีอนาคตที่แตกต่างกันโดยสิ้นเชิง
-            </p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Step 1 & 2 -->
-            <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow">
-                <h3 class="text-xl font-bold mb-3 gradient-text">1. ออกแบบและส่งผลิต</h3>
-                <p class="text-gray-700">
-                    <b class="text-green-600">ชิ้นงาน A (มี Zero):</b> ใส่ "เหลี่ยม" รองรับการวัด 6 จุด และส่งผลิตโดยไม่ต้องอธิบายเพิ่ม
-                </p>
-                <p class="mt-2 text-gray-700">
-                    <b class="text-red-600">ชิ้นงาน B (ไม่มี Zero):</b> ไม่ได้ใส่ "เหลี่ยม" ต้องอธิบายรายละเอียดทั้งหมดให้โรงงาน
-                </p>
-            </div>
-            <!-- Step 3 & 4 -->
-            <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow">
-                <h3 class="text-xl font-bold mb-3 gradient-text">2. ต้องการแก้ไข</h3>
-                <p class="text-gray-700">
-                    <b class="text-green-600">ชิ้นงาน A:</b> ส่งให้ใครก็ได้ที่มีเครื่อง CNC *และมีฟังชั้นวัด 6 จุด* ช่วยเจาะเพิ่มได้ทันที
-                </p>
-                <p class="mt-2 text-gray-700">
-                    <b class="text-red-600">ชิ้นงาน B:</b> ต้องเริ่มกระบวนการตั้งค่างานใหม่ทั้งหมด วุ่นวายและเสี่ยงต่อความผิดพลาด
-                </p>
-            </div>
-            <!-- Step 5 & 6 -->
-            <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow">
-                <h3 class="text-xl font-bold mb-3 gradient-text">3. ผลลัพธ์และอนาคต</h3>
-                <p class="text-gray-700">
-                    <b class="text-green-600">ชิ้นงาน A:</b> แก้ไขเสร็จในไม่กี่นาที พร้อมพัฒนาต่อยอดไปได้เรื่อยๆ
-                </p>
-                <p class="mt-2 text-gray-700">
-                    <b class="text-red-600">ชิ้นงาน B:</b> อาจต้องทำใหม่ทั้งชิ้น หรือใช้เวลาตั้งค่านานมาก สุดท้ายกลายเป็นภาระ
-                </p>
+        <div class="mt-12">
+            <div class="w-full max-w-3xl mx-auto bg-white p-2 rounded-xl border border-gray-100 shadow-2xl">
+                <img src="04072025PMZ8.png" alt="ไดอะแกรม The Pivot Standard" class="rounded-lg w-full h-auto">
             </div>
         </div>
     </div>
 </section>
 
-   <!-- Video Section -->
-<section id="videos" class="bg-white section px-4 text-gray-800">
+<section id="story" class="section px-4 bg-gray-50 text-gray-800">
+    <div class="container mx-auto max-w-6xl">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
+                📖 เรื่องราวของ 2 ชิ้นงาน
+            </h2>
+            <p class="mt-4 text-lg text-gray-600">
+                เมื่อหน้าตาเหมือนกัน... แต่อนาคตต่างกันโดยสิ้นเชิง
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
+                <div class="text-4xl mb-4">📦</div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">1. การส่งผลิต</h3>
+                <div class="space-y-4">
+                    <p class="text-sm bg-green-50 p-3 rounded text-green-800 border-l-4 border-green-500">
+                        <b>ชิ้นงาน Pivot:</b> มี "เหลี่ยมวัด" (Pivot Edge) ฝังมาในแบบ ส่งไฟล์ไปที่ไหนก็ได้ เครื่องจักรจะ "เห็น" จุดอ้างอิงเอง
+                    </p>
+                    <p class="text-sm bg-gray-50 p-3 rounded text-gray-600 border-l-4 border-gray-400">
+                        <b>ชิ้นงานทั่วไป:</b> ต้องเขียน Drawing กำกับยาวเหยียด เพื่อบอกช่างว่าจะจับงานตรงไหน
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
+                <div class="text-4xl mb-4">🔧</div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">2. เมื่อต้องแก้ไข</h3>
+                <div class="space-y-4">
+                    <p class="text-sm bg-green-50 p-3 rounded text-green-800 border-l-4 border-green-500">
+                        <b>ชิ้นงาน Pivot:</b> วางงานเข้าเครื่อง -> สั่ง Probe วัดจุด Pivot -> เครื่องรู้จักงานทันที -> แก้ไขได้เลย
+                    </p>
+                    <p class="text-sm bg-gray-50 p-3 rounded text-gray-600 border-l-4 border-gray-400">
+                        <b>ชิ้นงานทั่วไป:</b> ต้องมานั่งเคาะศูนย์ หาขอบใหม่ (ซึ่งไม่มีทางตรงจุดเดิม 100%) เสี่ยงงานเสียสูงมาก
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
+                <div class="text-4xl mb-4">🚀</div>
+                <h3 class="text-xl font-bold mb-3 text-gray-800">3. อนาคต</h3>
+                <div class="space-y-4">
+                    <p class="text-sm bg-green-50 p-3 rounded text-green-800 border-l-4 border-green-500">
+                        <b>ชิ้นงาน Pivot:</b> เป็นวัตถุอมตะ พัฒนาต่อยอดได้เรื่อยๆ (Infinite Iteration)
+                    </p>
+                    <p class="text-sm bg-gray-50 p-3 rounded text-gray-600 border-l-4 border-gray-400">
+                        <b>ชิ้นงานทั่วไป:</b> เป็นได้แค่วัตถุชิ้นหนึ่ง ถ้าจะเปลี่ยนดีไซน์... ต้องทำใหม่ทั้งชิ้น
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <section id="videos" class="bg-white section px-4 text-gray-800">
     <div class="container mx-auto max-w-5xl text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
-            🎥 ชมแนวคิดผ่านวิดีโอ
+            🎥 ชมการทำงานของระบบ Pivot
         </h2>
         <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
-            ทำความเข้าใจแนวคิด "Zero Reference System" ได้ง่ายๆ และเห็นภาพความแตกต่างอย่างชัดเจน
+            พิสูจน์ด้วยตาคุณเอง ว่าการ "แก้งาน" ที่เคยเป็นเรื่องยาก กลายเป็นเรื่องง่ายได้อย่างไร
         </p>
         <div class="mt-12 grid md:grid-cols-2 gap-8">
-            <!-- Video 1: The Concept -->
-            <div class="bg-blue-50 p-2 rounded-lg shadow-xl border border-blue-200">
+            <div class="bg-gray-900 p-1 rounded-lg shadow-2xl">
                 <div class="aspect-[9/16]">
                     <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/zHc43y5YUAQ" title="Piyawat Zero Reference System Concept" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
-            <!-- Video 2: The Story -->
-            <div class="bg-blue-50 p-2 rounded-lg shadow-xl border border-blue-200">
+            <div class="bg-gray-900 p-1 rounded-lg shadow-2xl">
                 <div class="aspect-[9/16]">
                     <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/kY5e6HPs2k4" title="The Story of Two Workpieces" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
@@ -245,38 +270,37 @@
     </div>
 </section>
 
-<!-- Storyboard Section -->
 <section id="benefits" class="section px-4 bg-white text-gray-800">
     <div class="container mx-auto max-w-5xl text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
-            🚀 เปลี่ยน "วิธีคิด" ปลดล็อก "อนาคต"
+            🚀 เปลี่ยน "วิธีคิด" = ปลดล็อก "ความเป็นไปได้"
         </h2>
-        <p class="mt-4 text-lg text-gray-700">
-            Zero System ไม่ได้เปลี่ยนแค่ชิ้นงาน แต่เปลี่ยนกระบวนการทั้งหมด
-        </p>
         <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-            <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow">
-                <h3 class="text-lg font-semibold text-blue-900">
-                    🤝 ทำงานร่วมกันอย่างไร้รอยต่อ
+            <div class="bg-white p-6 rounded-xl border border-blue-100 shadow-lg hover:-translate-y-1 transition duration-300">
+                <div class="text-blue-500 text-3xl mb-4">🤝</div>
+                <h3 class="text-lg font-bold text-blue-900">
+                    ภาษากลาง (Common Protocol)
                 </h3>
-                <p class="mt-2 text-gray-700">
-                    ใช้ "ชิ้นงาน" เป็นภาษากลาง ลดการสื่อสารที่ผิดพลาด
+                <p class="mt-2 text-gray-600 text-sm">
+                    ไม่ต้องเถียงกันเรื่องวิธีจับงาน ใช้ "ชิ้นงาน" เป็นตัวบอกตำแหน่งตัวเอง ลดความผิดพลาดในการสื่อสารเหลือ 0
                 </p>
             </div>
-            <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow">
-                <h3 class="text-lg font-semibold text-blue-900">
-                    ⏱️ ประหยัดเวลาและต้นทุน
+            <div class="bg-white p-6 rounded-xl border border-blue-100 shadow-lg hover:-translate-y-1 transition duration-300">
+                <div class="text-blue-500 text-3xl mb-4">⚡</div>
+                <h3 class="text-lg font-bold text-blue-900">
+                    Zero Setup Time
                 </h3>
-                <p class="mt-2 text-gray-700">
-                    ลดขั้นตอนการตั้งค่าใหม่ที่ไม่จำเป็น ทำให้แก้ไขงานได้รวดเร็ว
+                <p class="mt-2 text-gray-600 text-sm">
+                    ลดเวลาตั้งค่างาน (Setup) จากเป็นชั่วโมง เหลือเพียงไม่กี่วินาที เพียงแค่สั่ง Probe
                 </p>
             </div>
-            <div class="bg-blue-50 p-6 rounded-lg border border-blue-200 shadow">
-                <h3 class="text-lg font-semibold text-blue-900">
-                    ♾️ ศักยภาพในการพัฒนาไม่สิ้นสุด
+            <div class="bg-white p-6 rounded-xl border border-blue-100 shadow-lg hover:-translate-y-1 transition duration-300">
+                <div class="text-blue-500 text-3xl mb-4">♾️</div>
+                <h3 class="text-lg font-bold text-blue-900">
+                    Limitless Evolution
                 </h3>
-                <p class="mt-2 text-gray-700">
-                    ชิ้นงานของคุณพร้อมเสมอสำหรับการปรับปรุงและต่อยอด
+                <p class="mt-2 text-gray-600 text-sm">
+                    ศักยภาพในการพัฒนาไม่สิ้นสุด ชิ้นงานของคุณพร้อมเสมอสำหรับการปรับปรุงและต่อยอด
                 </p>
             </div>
         </div>
@@ -284,30 +308,23 @@
 </section>
 
         
-<!-- More Videos Section -->
-<section id="more-videos" class="bg-white section px-4 text-gray-800">
+<section id="more-videos" class="bg-gray-50 section px-4 text-gray-800">
     <div class="container mx-auto max-w-5xl text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
-            🎬 ตัวอย่างเพิ่มเติมและการประยุกต์ใช้
+            🎬 การประยุกต์ใช้จริง
         </h2>
-        <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
-            ดูตัวอย่างการนำ Zero System ไปใช้จริงในสถานการณ์ต่างๆ
-        </p>
         <div class="mt-12 grid md:grid-cols-2 gap-8">
-            <!-- Video 3 -->
-            <div class="bg-blue-50 p-2 rounded-lg shadow-xl border border-blue-200">
+            <div class="bg-white p-2 rounded-lg shadow-lg">
                 <div class="aspect-[9/16]">
                     <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/OgHZbu8aiSI" title="More Examples" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
-            <!-- Video 4 -->
-            <div class="bg-blue-50 p-2 rounded-lg shadow-xl border border-blue-200">
+            <div class="bg-white p-2 rounded-lg shadow-lg">
                 <div class="aspect-video">
                     <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/MT86fhXfzqU?si=JY4D5SpH35ax0525" title="Application and Use Case" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
-            <!-- Video 5 -->
-            <div class="bg-blue-50 p-2 rounded-lg shadow-xl border border-blue-200 md:col-span-2">
+            <div class="bg-white p-2 rounded-lg shadow-lg md:col-span-2">
                 <div class="aspect-video">
                     <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/f9x59gIhqxU" title="Application and Use Case" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
@@ -317,14 +334,6 @@
 </section>
 
 
-<!-- Benefits Section -->
-
-
-    </main>
-<!-- Founder & Contact Section -->
-
-
-<!-- Downloads & Links Section -->
 <section class="section bg-white text-gray-800">
     <div class="container mx-auto px-4 text-center">
         <h2 class="text-3xl font-bold text-blue-900 mb-12">
@@ -332,34 +341,32 @@
         </h2>
         <div class="flex flex-col md:flex-row justify-center items-stretch gap-8">
             
-            <!-- Paper Download Card -->
-            <div class="bg-blue-50 p-8 rounded-lg text-center flex flex-col justify-between w-full md:w-1/3 shadow-lg border border-blue-200">
+            <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl text-center flex flex-col justify-between w-full md:w-1/3 shadow-xl border border-blue-100 hover:shadow-2xl transition">
                 <div>
-                    <h3 class="text-xl font-semibold text-blue-900">
+                    <h3 class="text-xl font-bold text-blue-900">
                         📄 เอกสารข้อมูลเชิงลึก (White Paper)
                     </h3>
-                    <p class="mt-3 text-gray-700">
-                        เจาะลึกแนวคิดและเทคโนโลยีเบื้องหลัง Maker Customs OS ที่จะปฏิวัติการทำงาน CNC ของคุณ
+                    <p class="mt-3 text-gray-600 text-sm">
+                        เจาะลึกแนวคิดและเทคโนโลยีเบื้องหลัง The Pivot Standard
                     </p>
                 </div>
-                <button id="openModalBtn" class="mt-6 inline-block bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition-transform transform hover:scale-105">
-                    อ่าน Paper
+                <button id="openModalBtn" class="mt-6 w-full bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition-transform transform hover:scale-105 shadow-md">
+                    อ่าน White Paper
                 </button>
             </div>
             
-            <!-- CNC UI Link Card -->
-            <div class="bg-blue-50 rounded-lg text-center flex flex-col justify-between w-full md:w-1/3 shadow-lg border border-blue-200">
-                <video autoplay loop muted playsinline src="uicnc.mp4" onerror="this.style.display='none'" class="rounded-t-lg"></video>
+            <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl text-center flex flex-col justify-between w-full md:w-1/3 shadow-xl border border-blue-100 overflow-hidden hover:shadow-2xl transition">
+                <video autoplay loop muted playsinline src="uicnc.mp4" onerror="this.style.display='none'" class="w-full h-48 object-cover"></video>
                 <div class="content p-8 h-full flex flex-col justify-between">
                     <div>
-                        <h3 class="text-xl font-semibold text-blue-900">
+                        <h3 class="text-xl font-bold text-blue-900">
                             🖥️ MakerCustoms OS (iMAK CNC)
                         </h3>
-                        <p class="mt-3 text-gray-700">
-                            เข้าสู่หน้าจอควบคุมหลัก (Main UI) ของระบบ CNC ที่ถูกออกแบบมาเพื่อลดความซับซ้อนและเพิ่มประสิทธิภาพ
+                        <p class="mt-3 text-gray-600 text-sm">
+                            เข้าสู่หน้าจอควบคุมหลัก (Main UI) ของระบบ CNC ที่ถูกออกแบบมาเพื่อระบบ Pivot
                         </p>
                     </div>
-                    <a href="https://piyawat043.github.io/MakerCustoms-CNC-OS/" target="_blank" rel="noopener noreferrer" class="mt-6 inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105">
+                    <a href="https://piyawat043.github.io/MakerCustoms-CNC-OS/" target="_blank" rel="noopener noreferrer" class="mt-6 w-full inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105 shadow-md">
                         ไปยัง iMAK CNC UI
                     </a>
                 </div>
@@ -369,35 +376,35 @@
     </div>
 </section>
 
-<section id="founder" class="py-20 bg-white text-gray-800">
+<section id="founder" class="py-20 bg-gray-50 text-gray-800 border-t border-gray-200">
     <div class="container mx-auto px-6 text-center">
         <div class="max-w-2xl mx-auto fade-in">
-            <img src="founder.png" alt="ปิยวัฒน์ ทองจันทร์ (ไบรอั้น)" class="w-32 h-32 rounded-full mx-auto mb-6 shadow-lg border-4 border-blue-200">
+            <img src="founder.png" alt="ปิยวัฒน์ ทองจันทร์ (ไบรอั้น)" class="w-40 h-40 rounded-full mx-auto mb-6 shadow-2xl border-4 border-white">
             <h2 class="text-3xl font-bold text-blue-900">
                 👨‍💻 ปิยวัฒน์ ทองจันทร์ (ไบรอั้น)
             </h2>
-            <p class="text-lg text-gray-700 mb-4">
-                ผู้สร้างและผู้ก่อตั้ง, Maker Customs OS
+            <p class="text-lg text-gray-600 mb-2 font-medium">
+                ผู้สร้างและผู้ก่อตั้ง The Pivot Standard
             </p>
-			<div style="text-align:center; margin-top:30px;">
-  <p style="font-size:18px; font-weight:bold; color:#333;">
-    ติดต่อผมได้ที่นี่ครับ
-  </p>
-  <a href="https://line.me/ti/p/~aun043" target="_blank" style="display:inline-block; background-color:#06C755; color:#fff; padding:10px 20px; text-decoration:none; border-radius:5px; margin:5px;">
-    📱 Add Line (aun043)
-  </a>
-  <a href="https://www.facebook.com/Mr.Higun/" target="_blank" style="display:inline-block; background-color:#3b5998; color:#fff; padding:10px 20px; text-decoration:none; border-radius:5px; margin:5px;">
-    👍 Facebook
-  </a>
-  <a href="tel:+66851567441" style="display:inline-block; background-color:#FF5722; color:#fff; padding:10px 20px; text-decoration:none; border-radius:5px; margin:5px;">
-    ☎ โทรเลย 085-156-7441
-  </a>
-</div>
+            <p class="text-sm text-gray-500 mb-8 uppercase tracking-widest">Maker Customs OS</p>
 
-            <div class="bg-blue-50 p-8 rounded-lg shadow-md text-left space-y-6 border border-blue-200">
-                <blockquote class="border-l-4 border-blue-400 pl-4 italic text-gray-700">
-                    “ผมพูดกับทุกคนทุกระดับเหมือนกันหมด ไม่ว่าคน ๆ นั้นจะเป็นคนเก็บขยะหรือจะเป็นอธิการบดีของโรงเรียนก็ตามที”
-                    <cite class="block text-right not-italic font-semibold text-blue-900 mt-2">
+            <div class="flex justify-center gap-4 flex-wrap mb-10">
+                <a href="https://line.me/ti/p/~aun043" target="_blank" class="flex items-center gap-2 bg-[#06C755] text-white px-5 py-2 rounded-full font-bold hover:opacity-90 transition shadow">
+                   💬 Add Line
+                </a>
+                <a href="https://www.facebook.com/Mr.Higun/" target="_blank" class="flex items-center gap-2 bg-[#1877F2] text-white px-5 py-2 rounded-full font-bold hover:opacity-90 transition shadow">
+                   👍 Facebook
+                </a>
+                <a href="tel:+66851567441" class="flex items-center gap-2 bg-[#FF5722] text-white px-5 py-2 rounded-full font-bold hover:opacity-90 transition shadow">
+                   📞 085-156-7441
+                </a>
+            </div>
+
+            <div class="bg-white p-8 rounded-xl shadow-lg text-left space-y-6 border border-gray-100 relative">
+                <div class="absolute top-4 left-4 text-6xl text-blue-100 opacity-50 font-serif">“</div>
+                <blockquote class="pl-4 italic text-gray-700 relative z-10 text-lg">
+                    ผมพูดกับทุกคนทุกระดับเหมือนกันหมด ไม่ว่าคน ๆ นั้นจะเป็นคนเก็บขยะหรือจะเป็นอธิการบดีของโรงเรียนก็ตามที
+                    <cite class="block text-right not-italic font-bold text-blue-900 mt-4 text-sm uppercase tracking-wide">
                         - อัลเบิร์ต ไอน์สไตน์
                     </cite>
                 </blockquote>
@@ -405,31 +412,27 @@
         </div>
     </div>
 </section>
-   <!-- Footer -->
     <footer class="bg-gray-900 border-t border-gray-800">
-        <div class="container mx-auto py-6 px-4 text-center text-gray-500">
-            <p>&copy; 2024 Piyawat Zero Reference System. แนวคิดเพื่อการเปลี่ยนแปลง</p>
+        <div class="container mx-auto py-8 px-4 text-center text-gray-500 text-sm">
+            <p class="font-medium text-gray-400">&copy; 2024 The Pivot Standard (Piyawat System)</p>
+            <p class="mt-2">แนวคิดเพื่อการเปลี่ยนแปลงอุตสาหกรรมการผลิต</p>
         </div>
     </footer>
-   <!-- Paper Viewer Modal -->
-    <div id="paperModal" class="modal-overlay hidden fixed inset-0 bg-black bg-opacity-75 items-center justify-center p-4 z-50 opacity-0">
-        <div class="modal-content bg-gray-800 rounded-lg shadow-xl w-full max-w-3xl max-h-full flex flex-col scale-95 opacity-0">
-            <!-- Modal Header -->
+    <div id="paperModal" class="modal-overlay hidden fixed inset-0 bg-black bg-opacity-75 items-center justify-center p-4 z-50 opacity-0 transition-opacity duration-300">
+        <div class="modal-content bg-gray-800 rounded-lg shadow-xl w-full max-w-3xl max-h-full flex flex-col transform scale-95 opacity-0 transition-all duration-300">
             <div class="flex justify-between items-center p-4 border-b border-gray-700">
                 <h3 class="text-xl font-semibold text-white">White Paper Viewer</h3>
-                <button id="closeModalBtn" class="text-gray-400 hover:text-white text-3xl leading-none">&times;</button>
+                <button id="closeModalBtn" class="text-gray-400 hover:text-white text-3xl leading-none focus:outline-none">&times;</button>
             </div>
-            <!-- Modal Body -->
-            <div class="p-4 flex-grow overflow-y-auto relative">
-                <img id="paperImage" src="" alt="White Paper Page" class="w-full h-auto rounded" onerror="this.src='https://placehold.co/800x1131/1f2937/ffffff?text=Image+Not+Found';">
+            <div class="p-4 flex-grow overflow-y-auto relative bg-gray-900">
+                <img id="paperImage" src="" alt="White Paper Page" class="w-full h-auto rounded shadow-lg" onerror="this.src='https://placehold.co/800x1131/1f2937/ffffff?text=Image+Not+Found';">
             </div>
-            <!-- Modal Footer (Navigation) -->
-            <div class="flex justify-between items-center p-4 border-t border-gray-700">
-                <button id="prevBtn" class="bg-gray-600 text-white font-bold py-2 px-4 rounded hover:bg-gray-500 disabled:opacity-50 disabled:cursor-not-allowed">
+            <div class="flex justify-between items-center p-4 border-t border-gray-700 bg-gray-800">
+                <button id="prevBtn" class="bg-gray-700 text-white font-bold py-2 px-6 rounded hover:bg-gray-600 disabled:opacity-30 disabled:cursor-not-allowed transition">
                     &lt; ก่อนหน้า
                 </button>
-                <span id="pageIndicator" class="text-gray-300">หน้า 1 / 3</span>
-                <button id="nextBtn" class="bg-gray-600 text-white font-bold py-2 px-4 rounded hover:bg-gray-500 disabled:opacity-50 disabled:cursor-not-allowed">
+                <span id="pageIndicator" class="text-gray-300 font-mono">หน้า 1 / 3</span>
+                <button id="nextBtn" class="bg-blue-600 text-white font-bold py-2 px-6 rounded hover:bg-blue-500 disabled:opacity-30 disabled:cursor-not-allowed transition">
                     ถัดไป &gt;
                 </button>
             </div>
