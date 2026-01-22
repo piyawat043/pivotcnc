@@ -174,6 +174,103 @@
     </section>
 
 <section id="solution" class="section px-4 bg-white text-gray-800">
+<section id="six-point-process" class="section px-4 bg-slate-900 text-white border-t border-blue-500/30">
+    <div class="container mx-auto max-w-6xl">
+        
+        <div class="text-center mb-12">
+            <h2 class="text-4xl md:text-6xl font-bold gradient-text mb-6">
+                6-Point Calibration Process
+            </h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                เปลี่ยนการสื่อสารที่ซับซ้อน ให้เป็นภาษากลางที่เข้าใจตรงกันทั้งระบบ ด้วยการกำหนดจุดอ้างอิงผ่านกรอบสี่เหลี่ยมสมมติ
+            </p>
+            
+            <div class="inline-block bg-red-900/40 border-2 border-red-500 p-6 rounded-2xl max-w-2xl">
+                <h3 class="text-red-400 font-bold text-xl mb-2 flex items-center justify-center">
+                    ⚠️ ข้อกำหนดสำคัญด้านเทคโนโลยี
+                </h3>
+                <p class="text-gray-200">
+                    กระบวนการนี้จะใช้งานได้เต็มประสิทธิภาพ **เครื่องจักร CNC ของคุณต้องรองรับฟังก์ชันการวัด 6 จุด (6-Point Probing)** เพื่อคำนวณหาค่าความเอียงและตำแหน่งที่แท้จริง หากเครื่องจักรเดิมไม่รองรับฟังก์ชันนี้ จะไม่สามารถใช้มาตรฐานการทำซ้ำระดับสูงนี้ได้
+                </p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div class="group cursor-pointer" onclick="openLightbox('1.png')">
+                <div class="relative overflow-hidden rounded-xl border border-gray-700 bg-black aspect-video flex items-center justify-center">
+                    <img src="1.png" alt="Process 1" class="w-full h-full object-contain group-hover:scale-110 transition duration-500">
+                    <div class="absolute top-2 left-2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
+                </div>
+                <p class="mt-2 text-sm text-gray-400 text-center">กำหนดขอบเขตวัสดุ</p>
+            </div>
+            <div class="group cursor-pointer" onclick="openLightbox('2.png')">
+                <div class="relative overflow-hidden rounded-xl border border-gray-700 bg-black aspect-video flex items-center justify-center">
+                    <img src="2.png" alt="Process 2" class="w-full h-full object-contain group-hover:scale-110 transition duration-500">
+                    <div class="absolute top-2 left-2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
+                </div>
+                <p class="mt-2 text-sm text-gray-400 text-center">สร้างไฟล์ DXF และกรอบอ้างอิง</p>
+            </div>
+            <div class="group cursor-pointer" onclick="openLightbox('3.png')">
+                <div class="relative overflow-hidden rounded-xl border border-gray-700 bg-black aspect-video flex items-center justify-center">
+                    <img src="3.png" alt="Process 3" class="w-full h-full object-contain group-hover:scale-110 transition duration-500">
+                    <div class="absolute top-2 left-2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
+                </div>
+                <p class="mt-2 text-sm text-gray-400 text-center">กำหนดจุด Zero จากมุมสี่เหลี่ยม</p>
+            </div>
+            <div class="group cursor-pointer" onclick="openLightbox('4.png')">
+                <div class="relative overflow-hidden rounded-xl border border-gray-700 bg-black aspect-video flex items-center justify-center">
+                    <img src="4.png" alt="Process 4" class="w-full h-full object-contain group-hover:scale-110 transition duration-500">
+                    <div class="absolute top-2 left-2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">4</div>
+                </div>
+                <p class="mt-2 text-sm text-gray-400 text-center">Mapping ข้อมูลในซอฟต์แวร์</p>
+            </div>
+            <div class="group cursor-pointer" onclick="openLightbox('5.png')">
+                <div class="relative overflow-hidden rounded-xl border border-gray-700 bg-black aspect-video flex items-center justify-center">
+                    <img src="5.png" alt="Process 5" class="w-full h-full object-contain group-hover:scale-110 transition duration-500">
+                    <div class="absolute top-2 left-2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">5</div>
+                </div>
+                <p class="mt-2 text-sm text-gray-400 text-center">การวัดหน้างานเปรียบเทียบกับในคอม</p>
+            </div>
+            <div class="group cursor-pointer" onclick="openLightbox('6.png')">
+                <div class="relative overflow-hidden rounded-xl border border-gray-700 bg-black aspect-video flex items-center justify-center">
+                    <img src="6.png" alt="Process 6" class="w-full h-full object-contain group-hover:scale-110 transition duration-500">
+                    <div class="absolute top-2 left-2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">6</div>
+                </div>
+                <p class="mt-2 text-sm text-gray-400 text-center">ผลลัพธ์การจัดวางที่แม่นยำ 100%</p>
+            </div>
+        </div>
+
+        <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+            <h3 class="text-2xl font-bold text-blue-400 mb-4 text-center text-white">Logic ของกระบวนการ</h3>
+            <div class="grid md:grid-cols-2 gap-8 text-gray-300">
+                <p>
+                    เราใช้กระบวนการ <b>วาดรูปสี่เหลี่ยมเพื่อกำหนดจุด Zero</b> โดยอ้างอิงจากมุมของสี่เหลี่ยมนั้น วิธีนี้ช่วยให้เราหาจุดกึ่งกลางของจุดวัดทั้ง 6 จุดได้อย่างแม่นยำ
+                </p>
+                <p>
+                    นี่คือ "กระบวนการคิด" ที่เราทดสอบมาแล้วว่า <b>สามารถนำไปใช้ได้กับทุกซอฟต์แวร์ในโลก</b> ไม่ยึดติดกับยี่ห้อใด ขอเพียงเครื่องจักรมีระบบ Probe ที่วัด 6 จุดได้ ทุกอย่างจะเป็นเรื่องง่ายทันที
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="lightbox" class="fixed inset-0 bg-black/95 z-[100] hidden items-center justify-center p-4 cursor-zoom-out" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" class="max-w-full max-h-full rounded-lg shadow-2xl">
+</div>
+
+<script>
+    function openLightbox(src) {
+        document.getElementById('lightbox-img').src = src;
+        document.getElementById('lightbox').classList.remove('hidden');
+        document.getElementById('lightbox').classList.add('flex');
+        document.body.style.overflow = 'hidden'; // ป้องกันการเลื่อนหน้าจอ
+    }
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.add('hidden');
+        document.getElementById('lightbox').classList.remove('flex');
+        document.body.style.overflow = 'auto';
+    }
+</script>
     <div class="container mx-auto max-w-5xl text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
             💡 The Pivot Standard คืออะไร?
