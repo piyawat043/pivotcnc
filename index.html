@@ -9,252 +9,124 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-N2C778T4KC');
     </script>
-
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Kanit', sans-serif;
-        }
-        .gradient-text {
-            background: linear-gradient(to right, #4ade80, #3b82f6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .gradient-text-gold {
-            background: linear-gradient(to right, #d4af37, #b8860b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .section {
-            padding-top: 4rem;
-            padding-bottom: 4rem;
-        }
-        @media (min-width: 768px) {
-            .section {
-                padding-top: 6rem;
-                padding-bottom: 6rem;
-            }
-        }
-        /* Style for the video background */
-        .header-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: 0;
-            transform: translateX(-50%) translateY(-50%);
-            object-fit: cover;
-        }
-
+        body { font-family: 'Kanit', sans-serif; background-color: #020617; }
+        .gradient-text { background: linear-gradient(to right, #4ade80, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .section { padding-top: 3rem; padding-bottom: 3rem; }
     </style>
 </head>
-<body class="bg-white text-gray-800 antialiased">
-
-
-<header class="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
-    <video autoplay loop muted playsinline class="header-video opacity-300">
-        <source src="bggok.mp4" type="video/mp4">
-        เบราว์เซอร์ของคุณไม่รองรับวิดีโอแท็ก
-    </video>
-
-    <div class="absolute inset-0 bg-white/85"></div>
-
-    <div class="relative z-10 text-center max-w-5xl mx-auto px-4">
-        
-        <img src="mc005mini02.png" alt="Maker Customs Logo" class="mx-auto mb-6 w-32 h-32 md:w-32 md:h-32 object-contain" onerror="this.style.display='none'">
-
-        <div class="inline-block bg-blue-50 text-blue-900 px-4 py-1 rounded-full text-sm font-medium mb-4 border border-blue-200 tracking-wider uppercase">
-            Datum-Based Evolutionary Design
-        </div>
-        
-        <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-blue-900 leading-tight">
-            THE <span class="gradient-text">PIVOT</span> STANDARD
-        </h1>
-        <h2 class="text-2xl md:text-3xl font-semibold text-gray-600 mt-2">
-            (มาตรฐานปิยวัฒน์)
-        </h2>
-
-        <p class="mt-8 text-lg md:text-2xl text-gray-700 max-w-3xl mx-auto font-light leading-relaxed">
-            เปลี่ยน <b>"วัตถุตาย"</b> ให้เป็น <b>"วัตถุอมตะ"</b> <br>
-            ด้วยภาษากลางของการออกแบบ ที่ทำให้คุณแก้ไข ทำซ้ำ <br class="hidden md:inline">และพัฒนางานเดิมได้ไม่รู้จบ
-        </p>
-
-        <div class="mt-10">
-            <a href="#concept" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-full text-lg transition duration-300 transform hover:scale-105 shadow-xl">
-                รู้จักระบบ Pivot
-            </a>
-        </div>
-    </div>
-</header>
-
+<body class="text-gray-100 antialiased">
 
 <main>
-    <section id="concept" class="bg-blue-900 text-white section px-4">
-        <div class="container mx-auto max-w-4xl text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-8">ทำไมต้อง "Pivot"? (ปี-วัด)</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center text-left">
-                <div class="space-y-4">
-                    <h3 class="text-2xl font-bold text-green-400">ในทางสากล 🌍</h3>
-                    <p class="text-lg text-blue-100">
-                        <b>Pivot</b> คือจุดหมุนที่มั่นคง แต่ยอมให้ทุกอย่างรอบตัวปรับเปลี่ยนทิศทางได้... 
-                        ระบบนี้จึงไม่ใช่แค่การผลิตให้จบ แต่คือการสร้างฐานรากเพื่อให้ชิ้นงาน <b>"พลิกแพลง"</b> และ <b>"ไปต่อ"</b> ได้เสมอ
-                    </p>
-                </div>
-                <div class="space-y-4 border-l-2 border-blue-700 pl-8">
-                    <h3 class="text-2xl font-bold text-yellow-400">ในทางภาษาไทย 🇹🇭</h3>
-                    <p class="text-lg text-blue-100">
-                        <b>"ปิยวัฒน์"</b> (ปิยะ+วัฒนะ) หมายถึง ความเจริญงอกงามอันเป็นที่รัก... 
-                        นี่คือมาตรฐานที่ใส่จิตวิญญาณของผู้สร้างลงไป เพื่อให้งานทุกชิ้นเกิดการ <b>"พัฒนา"</b> อย่างไม่มีที่สิ้นสุด
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="problem" class="bg-white section px-4 text-gray-800">
-        <div class="container mx-auto max-w-5xl">
-            <div class="text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
-                    🚨 Dead Object vs. Living Object
-                </h2>
-                <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
-                    โลกเก่าสร้างชิ้นงานที่ "ตายแล้ว" (Fixed) แก้ไขไม่ได้... แต่โลกใหม่สร้างชิ้นงานที่ "มีชีวิต" (Adaptive)
-                </p>
-            </div>
-            
-            <div class="mt-12 grid md:grid-cols-2 gap-8 items-start">
-                
-                <div class="bg-gray-100 p-6 rounded-2xl border border-gray-300 flex flex-col h-full">
-                    <div class="mb-4 rounded-lg overflow-hidden relative">
-                         <video autoplay loop muted playsinline class="w-full h-auto grayscale opacity-80" src="vise.mp4" onerror="this.parentElement.innerHTML = '<div class=\'bg-gray-300 aspect-video w-full flex items-center justify-center rounded-lg\'><p class=\'text-gray-500\'>Traditional Method</p></div>';">
-                        </video>
-                        <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">Dead Object</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-700">
-                        แบบเดิม: ผลิตแล้วจบ (แก้ไข = พัง)
-                    </h3>
-                    <ul class="mt-4 space-y-3 text-gray-600">
-                        <li>❌ แกะงานออกแล้ว ศูนย์หายทันที</li>
-                        <li>❌ ถ้างานผิดพลาด = ต้องทิ้ง (Scrap)</li>
-                        <li>❌ เป็นวัตถุที่ตายตัว พัฒนาต่อไม่ได้</li>
-                        <li>🛑 "ความแม่นยำ" จบลงที่ขั้นตอนการผลิต</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-blue-50 p-6 rounded-2xl border-2 border-blue-400 flex flex-col h-full shadow-lg transform md:-translate-y-4">
-                    <div class="mb-4 rounded-lg overflow-hidden relative">
-                         <video autoplay loop muted playsinline class="w-full h-auto" src="new3dprobeaa.mp4" onerror="this.parentElement.innerHTML = '<div class=\'bg-blue-100 aspect-video w-full flex items-center justify-center rounded-lg\'><p class=\'text-blue-500\'>Pivot System</p></div>';">
-                        </video>
-                        <div class="absolute top-2 right-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">Living Object</div>
-                    </div>
-                    <h3 class="text-xl font-bold text-blue-900">
-                        แบบ Pivot: วัตถุที่มีชีวิต
-                    </h3>
-                    <ul class="mt-4 space-y-3 text-blue-800 font-medium">
-                        <li>✅ แกะออกแล้วใส่กลับเข้าไป ศูนย์เดิมเป๊ะ 100%</li>
-                        <li>✅ งานผิดพลาด = แก้ไขได้ (Reworkable)</li>
-                        <li>✅ อัปเกรดชิ้นงานเดิมได้ตลอดเวลา</li>
-                        <li>🚀 "ความแม่นยำ" เริ่มต้นใหม่ได้เสมอเมื่อต้องการ</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-<section id="solution" class="section px-4 bg-white text-gray-800">
-<section id="six-point-process" class="section px-4 bg-slate-900 text-white border-t border-blue-500/30">
-    <div class="container mx-auto max-w-6xl">
-        
-        <div class="text-center mb-12">
-            <h2 class="text-4xl md:text-6xl font-bold gradient-text mb-6">
-                6-Point Calibration Process
-            </h2>
-            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                เปลี่ยนการสื่อสารที่ซับซ้อน ให้เป็นภาษากลางที่เข้าใจตรงกันทั้งระบบ ด้วยการกำหนดจุดอ้างอิงผ่านกรอบสี่เหลี่ยมสมมติ
+    <section id="top-interface" class="pt-12 pb-6 px-4">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-2">
+                THE <span class="gradient-text">PIVOT</span> STANDARD
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 font-light mb-10 uppercase tracking-[0.2em]">
+                CNC Evolutionary Design Standard
             </p>
+
+            <div class="text-center mb-6">
+                <span class="bg-yellow-500/10 border border-yellow-500/50 text-yellow-500 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+                    Maker Customs OS - Interface Simulation
+                </span>
+            </div>
             
-            <div class="inline-block bg-red-900/40 border-2 border-red-500 p-6 rounded-2xl max-w-2xl">
-                <h3 class="text-red-400 font-bold text-xl mb-2 flex items-center justify-center">
-                    ⚠️ ข้อกำหนดสำคัญด้านเทคโนโลยี
-                </h3>
-                <p class="text-gray-200">
-                    กระบวนการนี้จะใช้งานได้เต็มประสิทธิภาพ **เครื่องจักร CNC ของคุณต้องรองรับฟังก์ชันการวัด 6 จุด (6-Point Probing)** เพื่อคำนวณหาค่าความเอียงและตำแหน่งที่แท้จริง หากเครื่องจักรเดิมไม่รองรับฟังก์ชันนี้ จะไม่สามารถใช้มาตรฐานการทำซ้ำระดับสูงนี้ได้
-                </p>
+            <div class="relative mx-auto max-w-5xl bg-black rounded-3xl p-1 shadow-[0_0_60px_rgba(59,130,246,0.2)] border-4 border-gray-800">
+                <div class="overflow-hidden rounded-2xl aspect-video bg-gray-900">
+                    <iframe src="https://piyawat043.github.io/OO-CNC-Interface/" class="w-full h-full border-none" title="CNC Interface"></iframe>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            <div class="group cursor-pointer" onclick="openLightbox('1.png')">
-                <div class="relative overflow-hidden rounded-xl border border-gray-700 bg-black aspect-video flex items-center justify-center">
-                    <img src="1.png" alt="Process 1" class="w-full h-full object-contain group-hover:scale-110 transition duration-500">
-                    <div class="absolute top-2 left-2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">1</div>
+    <section id="six-point-process" class="section px-4 bg-slate-900/50 border-t border-gray-800">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">6-Point Calibration</h2>
+                
+                <div class="inline-block bg-red-900/30 border border-red-500/50 p-6 rounded-2xl max-w-3xl mb-10 text-left">
+                    <p class="text-gray-200 leading-relaxed">
+                        <strong class="text-red-400 block mb-1">⚠️ ข้อกำหนดสำคัญ:</strong>
+                        มาตรฐานนี้จะใช้งานได้ต่อเมื่อเครื่องจักร CNC รองรับฟังก์ชัน **การวัด 6 จุด (6-Point Probing)** เพื่อกำหนดมุมและจุดกึ่งกลางของกรอบสี่เหลี่ยมสมมติ (Virtual Zero) ซึ่งเป็นกระบวนการคิดที่ทดสอบมาแล้วว่าใช้ได้กับทุกซอฟต์แวร์ในโลก
+                    </p>
                 </div>
-                <p class="mt-2 text-sm text-gray-400 text-center">กำหนดขอบเขตวัสดุ</p>
             </div>
-            <div class="group cursor-pointer" onclick="openLightbox('2.png')">
-                <div class="relative overflow-hidden rounded-xl border border-gray-700 bg-black aspect-video flex items-center justify-center">
-                    <img src="2.png" alt="Process 2" class="w-full h-full object-contain group-hover:scale-110 transition duration-500">
-                    <div class="absolute top-2 left-2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">2</div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-10">
+                <div class="group cursor-pointer overflow-hidden rounded-xl border border-gray-700" onclick="openLightbox('1.png')">
+                    <img src="1.png" class="group-hover:scale-105 transition duration-500 w-full h-auto">
                 </div>
-                <p class="mt-2 text-sm text-gray-400 text-center">สร้างไฟล์ DXF และกรอบอ้างอิง</p>
+                <div class="group cursor-pointer overflow-hidden rounded-xl border border-gray-700" onclick="openLightbox('2.png')">
+                    <img src="2.png" class="group-hover:scale-105 transition duration-500 w-full h-auto">
+                </div>
+                <div class="group cursor-pointer overflow-hidden rounded-xl border border-gray-700" onclick="openLightbox('3.png')">
+                    <img src="3.png" class="group-hover:scale-105 transition duration-500 w-full h-auto">
+                </div>
+                <div class="group cursor-pointer overflow-hidden rounded-xl border border-gray-700" onclick="openLightbox('4.png')">
+                    <img src="4.png" class="group-hover:scale-105 transition duration-500 w-full h-auto">
+                </div>
+                <div class="group cursor-pointer overflow-hidden rounded-xl border border-gray-700" onclick="openLightbox('5.png')">
+                    <img src="5.png" class="group-hover:scale-105 transition duration-500 w-full h-auto">
+                </div>
+                <div class="group cursor-pointer overflow-hidden rounded-xl border border-gray-700" onclick="openLightbox('6.png')">
+                    <img src="6.png" class="group-hover:scale-105 transition duration-500 w-full h-auto">
+                </div>
             </div>
-            <div class="group cursor-pointer" onclick="openLightbox('3.png')">
-                <div class="relative overflow-hidden rounded-xl border border-gray-700 bg-black aspect-video flex items-center justify-center">
-                    <img src="3.png" alt="Process 3" class="w-full h-full object-contain group-hover:scale-110 transition duration-500">
-                    <div class="absolute top-2 left-2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">3</div>
-                </div>
-                <p class="mt-2 text-sm text-gray-400 text-center">กำหนดจุด Zero จากมุมสี่เหลี่ยม</p>
-            </div>
-            <div class="group cursor-pointer" onclick="openLightbox('4.png')">
-                <div class="relative overflow-hidden rounded-xl border border-gray-700 bg-black aspect-video flex items-center justify-center">
-                    <img src="4.png" alt="Process 4" class="w-full h-full object-contain group-hover:scale-110 transition duration-500">
-                    <div class="absolute top-2 left-2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">4</div>
-                </div>
-                <p class="mt-2 text-sm text-gray-400 text-center">Mapping ข้อมูลในซอฟต์แวร์</p>
-            </div>
-            <div class="group cursor-pointer" onclick="openLightbox('5.png')">
-                <div class="relative overflow-hidden rounded-xl border border-gray-700 bg-black aspect-video flex items-center justify-center">
-                    <img src="5.png" alt="Process 5" class="w-full h-full object-contain group-hover:scale-110 transition duration-500">
-                    <div class="absolute top-2 left-2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">5</div>
-                </div>
-                <p class="mt-2 text-sm text-gray-400 text-center">การวัดหน้างานเปรียบเทียบกับในคอม</p>
-            </div>
-            <div class="group cursor-pointer" onclick="openLightbox('6.png')">
-                <div class="relative overflow-hidden rounded-xl border border-gray-700 bg-black aspect-video flex items-center justify-center">
-                    <img src="6.png" alt="Process 6" class="w-full h-full object-contain group-hover:scale-110 transition duration-500">
-                    <div class="absolute top-2 left-2 bg-blue-600 text-white w-8 h-8 rounded-full flex items-center justify-center font-bold">6</div>
-                </div>
-                <p class="mt-2 text-sm text-gray-400 text-center">ผลลัพธ์การจัดวางที่แม่นยำ 100%</p>
+
+            <div class="text-center max-w-3xl mx-auto italic text-gray-400">
+                "วาดสี่เหลี่ยมเพื่อกำหนด Zero จากมุม จบงานด้วยการคุยภาษาเดียวกันทั้งคนหน้าคอมและหน้าเครื่อง"
             </div>
         </div>
+    </section>
 
-        <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
-            <h3 class="text-2xl font-bold text-blue-400 mb-4 text-center text-white">Logic ของกระบวนการ</h3>
-            <div class="grid md:grid-cols-2 gap-8 text-gray-300">
-                <p>
-                    เราใช้กระบวนการ <b>วาดรูปสี่เหลี่ยมเพื่อกำหนดจุด Zero</b> โดยอ้างอิงจากมุมของสี่เหลี่ยมนั้น วิธีนี้ช่วยให้เราหาจุดกึ่งกลางของจุดวัดทั้ง 6 จุดได้อย่างแม่นยำ
-                </p>
-                <p>
-                    นี่คือ "กระบวนการคิด" ที่เราทดสอบมาแล้วว่า <b>สามารถนำไปใช้ได้กับทุกซอฟต์แวร์ในโลก</b> ไม่ยึดติดกับยี่ห้อใด ขอเพียงเครื่องจักรมีระบบ Probe ที่วัด 6 จุดได้ ทุกอย่างจะเป็นเรื่องง่ายทันที
-                </p>
+    <section id="problem" class="bg-white text-gray-900 section px-4">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl font-bold text-center mb-10 text-blue-900">Dead Object vs Living Object</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-100 p-6 rounded-2xl border border-gray-200">
+                    <video autoplay loop muted playsinline class="w-full rounded-lg mb-4 grayscale" src="vise.mp4"></video>
+                    <h3 class="font-bold">แบบเดิม: วัตถุตายตัว</h3>
+                    <p class="text-sm text-gray-600 mt-2">แกะออกแล้วศูนย์หาย แก้ไขไม่ได้ ต้องทิ้งอย่างเดียว</p>
+                </div>
+                <div class="bg-blue-50 p-6 rounded-2xl border-2 border-blue-400">
+                    <video autoplay loop muted playsinline class="w-full rounded-lg mb-4" src="new3dprobeaa.mp4"></video>
+                    <h3 class="font-bold text-blue-900">แบบ Pivot: วัตถุมีชีวิต</h3>
+                    <p class="text-sm text-blue-800 mt-2">แกะออกใส่ใหม่ศูนย์เดิม 100% อัปเกรดชิ้นงานได้ตลอดไป</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<div id="lightbox" class="fixed inset-0 bg-black/95 z-[100] hidden items-center justify-center p-4 cursor-zoom-out" onclick="closeLightbox()">
+    <section id="videos" class="section px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold text-center mb-12">🎥 Demonstration</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="aspect-[9/16]"><iframe class="rounded-xl w-full h-full border border-gray-700" src="https://www.youtube.com/embed/zHc43y5YUAQ"></iframe></div>
+                <div class="aspect-[9/16]"><iframe class="rounded-xl w-full h-full border border-gray-700" src="https://www.youtube.com/embed/kY5e6HPs2k4"></iframe></div>
+                <div class="aspect-[9/16]"><iframe class="rounded-xl w-full h-full border border-gray-700" src="https://www.youtube.com/embed/mK9kF0oG3kQ"></iframe></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="founder" class="section px-4 bg-gray-900 border-t border-gray-800 text-center">
+        <div class="container mx-auto max-w-4xl">
+            <img src="founder.png" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500 shadow-xl">
+            <h2 class="text-2xl font-bold">ปิยวัฒน์ ทองจันทร์ (ไบรอั้น)</h2>
+            <p class="text-gray-400 mb-6">Founder of The Pivot Standard</p>
+            <div class="flex justify-center gap-4">
+                <a href="tel:0851567441" class="bg-blue-600 px-6 py-2 rounded-full font-bold">📞 085-156-7441</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div id="lightbox" class="fixed inset-0 bg-black/95 z-[100] hidden items-center justify-center p-4" onclick="this.classList.add('hidden')">
     <img id="lightbox-img" src="" class="max-w-full max-h-full rounded-lg shadow-2xl">
 </div>
 
@@ -263,381 +135,8 @@
         document.getElementById('lightbox-img').src = src;
         document.getElementById('lightbox').classList.remove('hidden');
         document.getElementById('lightbox').classList.add('flex');
-        document.body.style.overflow = 'hidden'; // ป้องกันการเลื่อนหน้าจอ
-    }
-    function closeLightbox() {
-        document.getElementById('lightbox').classList.add('hidden');
-        document.getElementById('lightbox').classList.remove('flex');
-        document.body.style.overflow = 'auto';
     }
 </script>
-    <div class="container mx-auto max-w-5xl text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
-            💡 The Pivot Standard คืออะไร?
-        </h2>
-        <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
-            มันคือนิยามใหม่ของการออกแบบเชิงวิศวกรรม (Engineering Design Protocol)
-        </p>
-        <div class="mt-8 bg-gradient-to-r from-blue-50 to-white p-10 rounded-2xl border border-blue-100 inline-block shadow-xl">
-            <p class="text-xl md:text-2xl font-semibold text-blue-900 leading-relaxed">
-                "เราไม่ได้แค่ออกแบบรูปทรง... <br>
-                แต่เราฝัง <span class="gradient-text font-bold text-3xl">'จุดกำเนิด' (Pivot Points)</span> <br>
-                ลงไปใน DNA ของชิ้นงาน เพื่อให้มันกลับมาเกิดใหม่ได้เสมอ"
-            </p>
-        </div>
-        <div class="mt-12">
-            <div class="w-full max-w-3xl mx-auto bg-white p-2 rounded-xl border border-gray-100 shadow-2xl">
-                <img src="04072025PMZ8.png" alt="ไดอะแกรม The Pivot Standard" class="rounded-lg w-full h-auto">
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="story" class="section px-4 bg-gray-50 text-gray-800">
-    <div class="container mx-auto max-w-6xl">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
-                📖 เรื่องราวของ 2 ชิ้นงาน
-            </h2>
-            <p class="mt-4 text-lg text-gray-600">
-                เมื่อหน้าตาเหมือนกัน... แต่อนาคตต่างกันโดยสิ้นเชิง
-            </p>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
-                <div class="text-4xl mb-4">📦</div>
-                <h3 class="text-xl font-bold mb-3 text-gray-800">1. การส่งผลิต</h3>
-                <div class="space-y-4">
-                    <p class="text-sm bg-green-50 p-3 rounded text-green-800 border-l-4 border-green-500">
-                        <b>ชิ้นงาน Pivot:</b> มี "เหลี่ยมวัด" (Pivot Edge) ฝังมาในแบบ ส่งไฟล์ไปที่ไหนก็ได้ เครื่องจักรจะ "เห็น" จุดอ้างอิงเอง
-                    </p>
-                    <p class="text-sm bg-gray-50 p-3 rounded text-gray-600 border-l-4 border-gray-400">
-                        <b>ชิ้นงานทั่วไป:</b> ต้องเขียน Drawing กำกับยาวเหยียด เพื่อบอกช่างว่าจะจับงานตรงไหน
-                    </p>
-                </div>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
-                <div class="text-4xl mb-4">🔧</div>
-                <h3 class="text-xl font-bold mb-3 text-gray-800">2. เมื่อต้องแก้ไข</h3>
-                <div class="space-y-4">
-                    <p class="text-sm bg-green-50 p-3 rounded text-green-800 border-l-4 border-green-500">
-                        <b>ชิ้นงาน Pivot:</b> วางงานเข้าเครื่อง -> สั่ง Probe วัดจุด Pivot -> เครื่องรู้จักงานทันที -> แก้ไขได้เลย
-                    </p>
-                    <p class="text-sm bg-gray-50 p-3 rounded text-gray-600 border-l-4 border-gray-400">
-                        <b>ชิ้นงานทั่วไป:</b> ต้องมานั่งเคาะศูนย์ หาขอบใหม่ (ซึ่งไม่มีทางตรงจุดเดิม 100%) เสี่ยงงานเสียสูงมาก
-                    </p>
-                </div>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100">
-                <div class="text-4xl mb-4">🚀</div>
-                <h3 class="text-xl font-bold mb-3 text-gray-800">3. อนาคต</h3>
-                <div class="space-y-4">
-                    <p class="text-sm bg-green-50 p-3 rounded text-green-800 border-l-4 border-green-500">
-                        <b>ชิ้นงาน Pivot:</b> เป็นวัตถุอมตะ พัฒนาต่อยอดได้เรื่อยๆ (Infinite Iteration)
-                    </p>
-                    <p class="text-sm bg-gray-50 p-3 rounded text-gray-600 border-l-4 border-gray-400">
-                        <b>ชิ้นงานทั่วไป:</b> เป็นได้แค่วัตถุชิ้นหนึ่ง ถ้าจะเปลี่ยนดีไซน์... ต้องทำใหม่ทั้งชิ้น
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-   <section id="videos" class="bg-white section px-4 text-gray-800">
-    <div class="container mx-auto max-w-5xl text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
-            🎥 ชมการทำงานของระบบ Pivot
-        </h2>
-        <p class="mt-4 text-lg text-gray-700 max-w-3xl mx-auto">
-            พิสูจน์ด้วยตาคุณเอง ว่าการ "แก้งาน" ที่เคยเป็นเรื่องยาก กลายเป็นเรื่องง่ายได้อย่างไร
-        </p>
-        <div class="mt-12 grid md:grid-cols-2 gap-8">
-            <div class="bg-gray-900 p-1 rounded-lg shadow-2xl">
-                <div class="aspect-[9/16]">
-                    <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/zHc43y5YUAQ" title="Piyawat Zero Reference System Concept" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="bg-gray-900 p-1 rounded-lg shadow-2xl">
-                <div class="aspect-[9/16]">
-                    <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/kY5e6HPs2k4" title="The Story of Two Workpieces" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="benefits" class="section px-4 bg-white text-gray-800">
-    <div class="container mx-auto max-w-5xl text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
-            🚀 เปลี่ยน "วิธีคิด" = ปลดล็อก "ความเป็นไปได้"
-        </h2>
-        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-            <div class="bg-white p-6 rounded-xl border border-blue-100 shadow-lg hover:-translate-y-1 transition duration-300">
-                <div class="text-blue-500 text-3xl mb-4">🤝</div>
-                <h3 class="text-lg font-bold text-blue-900">
-                    ภาษากลาง (Common Protocol)
-                </h3>
-                <p class="mt-2 text-gray-600 text-sm">
-                    ไม่ต้องเถียงกันเรื่องวิธีจับงาน ใช้ "ชิ้นงาน" เป็นตัวบอกตำแหน่งตัวเอง ลดความผิดพลาดในการสื่อสารเหลือ 0
-                </p>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-blue-100 shadow-lg hover:-translate-y-1 transition duration-300">
-                <div class="text-blue-500 text-3xl mb-4">⚡</div>
-                <h3 class="text-lg font-bold text-blue-900">
-                    Zero Setup Time
-                </h3>
-                <p class="mt-2 text-gray-600 text-sm">
-                    ลดเวลาตั้งค่างาน (Setup) จากเป็นชั่วโมง เหลือเพียงไม่กี่วินาที เพียงแค่สั่ง Probe
-                </p>
-            </div>
-            <div class="bg-white p-6 rounded-xl border border-blue-100 shadow-lg hover:-translate-y-1 transition duration-300">
-                <div class="text-blue-500 text-3xl mb-4">♾️</div>
-                <h3 class="text-lg font-bold text-blue-900">
-                    Limitless Evolution
-                </h3>
-                <p class="mt-2 text-gray-600 text-sm">
-                    ศักยภาพในการพัฒนาไม่สิ้นสุด ชิ้นงานของคุณพร้อมเสมอสำหรับการปรับปรุงและต่อยอด
-                </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-        
-<section id="more-videos" class="bg-gray-50 section px-4 text-gray-800">
-    <div class="container mx-auto max-w-5xl text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">
-            🎬 การประยุกต์ใช้จริง
-        </h2>
-        <div class="mt-12 grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-2 rounded-lg shadow-lg">
-                <div class="aspect-[9/16]">
-                    <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/OgHZbu8aiSI" title="More Examples" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="bg-white p-2 rounded-lg shadow-lg">
-                <div class="aspect-video">
-                    <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/MT86fhXfzqU?si=JY4D5SpH35ax0525" title="Application and Use Case" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="bg-white p-2 rounded-lg shadow-lg md:col-span-2">
-                <div class="aspect-video">
-                    <iframe class="rounded-md w-full h-full" src="https://www.youtube.com/embed/f9x59gIhqxU" title="Application and Use Case" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="section bg-white text-gray-800">
-    <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold text-blue-900 mb-12">
-            🛠️ ทรัพยากรและเครื่องมือ
-        </h2>
-        <div class="flex flex-col md:flex-row justify-center items-stretch gap-8">
-            
-            <div class="bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl text-center flex flex-col justify-between w-full md:w-1/3 shadow-xl border border-blue-100 hover:shadow-2xl transition">
-                <div>
-                    <h3 class="text-xl font-bold text-blue-900">
-                        📄 เอกสารข้อมูลเชิงลึก (White Paper)
-                    </h3>
-                    <p class="mt-3 text-gray-600 text-sm">
-                        เจาะลึกแนวคิดและเทคโนโลยีเบื้องหลัง The Pivot Standard
-                    </p>
-                </div>
-                <button id="openModalBtn" class="mt-6 w-full bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition-transform transform hover:scale-105 shadow-md">
-                    อ่าน White Paper
-                </button>
-            </div>
-            
-            <div class="bg-gradient-to-br from-blue-50 to-white rounded-xl text-center flex flex-col justify-between w-full md:w-1/3 shadow-xl border border-blue-100 overflow-hidden hover:shadow-2xl transition">
-                <video autoplay loop muted playsinline src="uicnc.mp4" onerror="this.style.display='none'" class="w-full h-48 object-cover"></video>
-                <div class="content p-8 h-full flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-xl font-bold text-blue-900">
-                            🖥️ MakerCustoms OS (CNC-Interface)
-                        </h3>
-                        <p class="mt-3 text-gray-600 text-sm">
-                            เข้าสู่หน้าจอควบคุมหลัก CNC-Interface
-                        </p>
-                    </div>
-                    <a href="https://piyawat043.github.io/OO-CNC-Interface/" target="_blank" rel="noopener noreferrer" class="mt-6 w-full inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105 shadow-md">
-                        ไปยัง CNC-Interface
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section id="founder" class="py-20 bg-gray-50 text-gray-800 border-t border-gray-200">
-    <div class="container mx-auto px-6 text-center">
-        <div class="max-w-2xl mx-auto fade-in">
-            <img src="founder.png" alt="ปิยวัฒน์ ทองจันทร์ (ไบรอั้น)" class="w-40 h-40 rounded-full mx-auto mb-6 shadow-2xl border-4 border-white">
-            <h2 class="text-3xl font-bold text-blue-900">
-                👨‍💻 ปิยวัฒน์ ทองจันทร์ (ไบรอั้น)
-            </h2>
-            <p class="text-lg text-gray-600 mb-2 font-medium">
-                ผู้สร้างและผู้ก่อตั้ง The Pivot Standard
-            </p>
-            <p class="text-sm text-gray-500 mb-8 uppercase tracking-widest">Maker Customs OS</p>
-
-            <div class="flex justify-center gap-4 flex-wrap mb-10">
-                <a href="https://line.me/ti/p/~aun043" target="_blank" class="flex items-center gap-2 bg-[#06C755] text-white px-5 py-2 rounded-full font-bold hover:opacity-90 transition shadow">
-                   💬 Add Line
-                </a>
-                <a href="https://www.facebook.com/Mr.Higun/" target="_blank" class="flex items-center gap-2 bg-[#1877F2] text-white px-5 py-2 rounded-full font-bold hover:opacity-90 transition shadow">
-                   👍 Facebook
-                </a>
-                <a href="tel:+66851567441" class="flex items-center gap-2 bg-[#FF5722] text-white px-5 py-2 rounded-full font-bold hover:opacity-90 transition shadow">
-                   📞 085-156-7441
-                </a>
-            </div>
-
-            <div class="bg-white p-8 rounded-xl shadow-lg text-left space-y-6 border border-gray-100 relative">
-                <div class="absolute top-4 left-4 text-6xl text-blue-100 opacity-50 font-serif">“</div>
-                <blockquote class="pl-4 italic text-gray-700 relative z-10 text-lg">
-                    ผมพูดกับทุกคนทุกระดับเหมือนกันหมด ไม่ว่าคน ๆ นั้นจะเป็นคนเก็บขยะหรือจะเป็นอธิการบดีของโรงเรียนก็ตามที
-                    <cite class="block text-right not-italic font-bold text-blue-900 mt-4 text-sm uppercase tracking-wide">
-                        - อัลเบิร์ต ไอน์สไตน์
-                    </cite>
-                </blockquote>
-            </div>
-        </div>
-    </div>
-</section>
-    <footer class="bg-gray-900 border-t border-gray-800">
-        <div class="container mx-auto py-8 px-4 text-center text-gray-500 text-sm">
-            <p class="font-medium text-gray-400">&copy; 2024 The Pivot Standard (Piyawat System)</p>
-            <p class="mt-2">แนวคิดเพื่อการเปลี่ยนแปลงอุตสาหกรรมการผลิต</p>
-        </div>
-    </footer>
-    <div id="paperModal" class="modal-overlay hidden fixed inset-0 bg-black bg-opacity-75 items-center justify-center p-4 z-50 opacity-0 transition-opacity duration-300">
-        <div class="modal-content bg-gray-800 rounded-lg shadow-xl w-full max-w-3xl max-h-full flex flex-col transform scale-95 opacity-0 transition-all duration-300">
-            <div class="flex justify-between items-center p-4 border-b border-gray-700">
-                <h3 class="text-xl font-semibold text-white">White Paper Viewer</h3>
-                <button id="closeModalBtn" class="text-gray-400 hover:text-white text-3xl leading-none focus:outline-none">&times;</button>
-            </div>
-            <div class="p-4 flex-grow overflow-y-auto relative bg-gray-900">
-                <img id="paperImage" src="" alt="White Paper Page" class="w-full h-auto rounded shadow-lg" onerror="this.src='https://placehold.co/800x1131/1f2937/ffffff?text=Image+Not+Found';">
-            </div>
-            <div class="flex justify-between items-center p-4 border-t border-gray-700 bg-gray-800">
-                <button id="prevBtn" class="bg-gray-700 text-white font-bold py-2 px-6 rounded hover:bg-gray-600 disabled:opacity-30 disabled:cursor-not-allowed transition">
-                    &lt; ก่อนหน้า
-                </button>
-                <span id="pageIndicator" class="text-gray-300 font-mono">หน้า 1 / 3</span>
-                <button id="nextBtn" class="bg-blue-600 text-white font-bold py-2 px-6 rounded hover:bg-blue-500 disabled:opacity-30 disabled:cursor-not-allowed transition">
-                    ถัดไป &gt;
-                </button>
-            </div>
-        </div>
-    </div>
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // --- Modal Logic ---
-
-            const openModalBtn = document.getElementById('openModalBtn');
-            const closeModalBtn = document.getElementById('closeModalBtn');
-            const modal = document.getElementById('paperModal');
-            const modalContent = modal.querySelector('.modal-content');
-            const paperImage = document.getElementById('paperImage');
-            const prevBtn = document.getElementById('prevBtn');
-            const nextBtn = document.getElementById('nextBtn');
-            const pageIndicator = document.getElementById('pageIndicator');
-
-            // !!! สำคัญ !!!
-            // 1. แปลงไฟล์ PDF ของคุณเป็นรูปภาพ (JPG หรือ PNG)
-            // 2. ตั้งชื่อไฟล์เรียงตามลำดับ เช่น paper-1.jpg, paper-2.jpg
-            // 3. นำไฟล์รูปภาพไปไว้ในโฟลเดอร์เดียวกับ index.html
-            // 4. แก้ไขรายการด้านล่างให้ตรงกับชื่อไฟล์ของคุณ
-            const paperPages = [
-                'paper-1.jpg', // แทนที่ด้วย 'paper-1.jpg'
-                'paper-2.jpg', // แทนที่ด้วย 'paper-2.jpg'
-                'paper-3.jpg'  // แทนที่ด้วย 'paper-3.jpg'
-            ];
-            
-            let currentPage = 0;
-
-            function updateModalContent() {
-                if (paperPages.length > 0) {
-                    paperImage.src = paperPages[currentPage];
-                    pageIndicator.textContent = `หน้า ${currentPage + 1} / ${paperPages.length}`;
-                    prevBtn.disabled = currentPage === 0;
-                    nextBtn.disabled = currentPage === paperPages.length - 1;
-                }
-            }
-
-            function openModal() {
-                currentPage = 0;
-                updateModalContent();
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                // Trigger transition
-                setTimeout(() => {
-                    modal.classList.remove('opacity-0');
-                    modalContent.classList.remove('scale-95', 'opacity-0');
-                    modalContent.classList.add('scale-100', 'opacity-100');
-                }, 10);
-            }
-
-            function closeModal() {
-                modalContent.classList.remove('scale-100', 'opacity-100');
-                modalContent.classList.add('scale-95', 'opacity-0');
-                modal.classList.add('opacity-0');
-                setTimeout(() => {
-                    modal.classList.add('hidden');
-                    modal.classList.remove('flex');
-                }, 300); // Wait for transition to finish
-            }
-
-            if (openModalBtn) {
-                openModalBtn.addEventListener('click', openModal);
-            }
-            if(closeModalBtn) {
-                closeModalBtn.addEventListener('click', closeModal);
-            }
-            
-            // Close modal when clicking on the overlay
-            if(modal) {
-                modal.addEventListener('click', (event) => {
-                    if (event.target === modal) {
-                        closeModal();
-                    }
-                });
-            }
-
-            // Close modal with Escape key
-            document.addEventListener('keydown', (event) => {
-                if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
-                    closeModal();
-                }
-            });
-
-            if (prevBtn) {
-                prevBtn.addEventListener('click', () => {
-                    if (currentPage > 0) {
-                        currentPage--;
-                        updateModalContent();
-                    }
-                });
-            }
-            
-            if (nextBtn) {
-                nextBtn.addEventListener('click', () => {
-                    if (currentPage < paperPages.length - 1) {
-                        currentPage++;
-                        updateModalContent();
-                    }
-                });
-            }
-        });
-    </script>
-
 
 </body>
 </html>
