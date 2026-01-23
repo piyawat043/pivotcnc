@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Pivot Standard (มาตรฐานปิยวัฒน์)</title>
+    <title>มาตรฐานปิยวัฒน์ - โปรโตคอลการออกแบบวิศวกรรมวิวัฒนาการ</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2C778T4KC"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -12,131 +12,189 @@
       gtag('config', 'G-N2C778T4KC');
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Kanit', sans-serif; background-color: #020617; }
+        body { font-family: 'Kanit', sans-serif; background-color: #0a0a0a; color: #e5e5e5; }
         .gradient-text { background: linear-gradient(to right, #4ade80, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .section { padding-top: 3rem; padding-bottom: 3rem; }
+        .section { padding: 4rem 1rem; }
+        .tech-term { font-weight: 600; color: #3b82f6; }
     </style>
 </head>
-<body class="text-gray-100 antialiased">
+<body class="antialiased">
 
-<main>
-    <section id="top-interface" class="pt-12 pb-6 px-4">
-        <div class="container mx-auto max-w-6xl text-center">
-            <h1 class="text-5xl md:text-8xl font-black tracking-tighter mb-2">
-                THE <span class="gradient-text">PIVOT</span> STANDARD
+<header class="fixed top-0 left-0 right-0 bg-black/80 backdrop-blur-md z-50 border-b border-gray-800">
+    <div class="container mx-auto max-w-6xl px-4 py-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold gradient-text">มาตรฐานปิยวัฒน์</h1>
+        <nav class="flex gap-6">
+            <a href="#overview" class="text-gray-300 hover:text-white">ภาพรวม</a>
+            <a href="#principles" class="text-gray-300 hover:text-white">หลักการ</a>
+            <a href="#benefits" class="text-gray-300 hover:text-white">ข้อดี</a>
+            <a href="#implementation" class="text-gray-300 hover:text-white">การนำไปใช้</a>
+            <a href="#demonstration" class="text-gray-300 hover:text-white">การสาธิต</a>
+            <a href="#founder" class="text-gray-300 hover:text-white">ผู้ก่อตั้ง</a>
+            <a href="index.html" class="text-gray-300 hover:text-white">English</a>
+        </nav>
+    </div>
+</header>
+
+<main class="pt-20">
+    <section id="hero" class="section text-center bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4 leading-tight">
+                มาตรฐานปิยวัฒน์: <span class="gradient-text">ภาษาใหม่ในวิศวกรรมการออกแบบ Datum-Based Evolutionary</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-400 font-light mb-10 uppercase tracking-[0.2em]">
-                CNC Evolutionary Design Standard
+            <p class="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
+                ภาษาใหม่นี้ได้ถือกำเนิดแล้ว! มันปฏิวัติการผลิต CNC โดยทำให้ชิ้นงานมีชีวิตชีวา ปรับปรุงได้ 100%, ตั้งค่าเวลาเป็นศูนย์ และวิวัฒนาการไร้ขีดจำกัด
             </p>
-
-            <div class="text-center mb-6">
-                <span class="bg-yellow-500/10 border border-yellow-500/50 text-yellow-500 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
-                    Maker Customs OS - Interface Simulation
-                </span>
-            </div>
-            
-            <div class="relative mx-auto max-w-5xl bg-black rounded-3xl p-1 shadow-[0_0_60px_rgba(59,130,246,0.2)] border-4 border-gray-800">
-                <div class="overflow-hidden rounded-2xl aspect-video bg-gray-900">
-                    <iframe src="https://piyawat043.github.io/OO-CNC-Interface/" class="w-full h-full border-none" title="CNC Interface"></iframe>
-                </div>
-            </div>
+            <a href="#overview" class="bg-blue-600 px-8 py-3 rounded-full font-bold text-white hover:bg-blue-500 transition">เรียนรู้เพิ่มเติม</a>
         </div>
     </section>
 
-    <section id="six-point-process" class="section px-4 bg-slate-900/50 border-t border-gray-800">
+    <section id="overview" class="section px-4">
         <div class="container mx-auto max-w-6xl">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-5xl font-bold mb-6">6-Point Calibration</h2>
-                
-                <div class="inline-block bg-red-900/30 border border-red-500/50 p-6 rounded-2xl max-w-3xl mb-10 text-left">
-                    <p class="text-gray-200 leading-relaxed">
-                        <strong class="text-red-400 block mb-1">⚠️ ข้อกำหนดสำคัญ:</strong>
-                        มาตรฐานนี้จะใช้งานได้ต่อเมื่อเครื่องจักร CNC รองรับฟังก์ชัน **การวัด 6 จุด (6-Point Probing)** เพื่อกำหนดมุมและจุดกึ่งกลางของกรอบสี่เหลี่ยมสมมติ (Virtual Zero) ซึ่งเป็นกระบวนการคิดที่ทดสอบมาแล้วว่าใช้ได้กับทุกซอฟต์แวร์ในโลก
+            <h2 class="text-3xl font-bold mb-8 text-center">ภาพรวมโปรโตคอล</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">วัตถุตาย vs วัตถุมีชีวิต</h3>
+                    <p class="mb-4">
+                        วิศวกรรมแบบดั้งเดิมสร้าง <span class="tech-term">วัตถุตาย</span> ซึ่งมี datum คงที่ ทำให้ปรับเปลี่ยนยากและเกิดของเสียสูง
+                    </p>
+                    <p>
+                        มาตรฐานปิยวัฒน์สร้าง <span class="tech-term">วัตถุมีชีวิต</span> ด้วย <span class="tech-term">จุดหมุน</span> และ <span class="tech-term">ขอบหมุน</span> ที่ฝังตัว ทำให้ชิ้นงานวิวัฒนาการได้อย่างต่อเนื่อง โดยรักษาความแม่นยำ
                     </p>
                 </div>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-10">
-                <div class="group cursor-pointer overflow-hidden rounded-xl border border-gray-700" onclick="openLightbox('1.png')">
-                    <img src="1.png" class="group-hover:scale-105 transition duration-500 w-full h-auto">
-                </div>
-                <div class="group cursor-pointer overflow-hidden rounded-xl border border-gray-700" onclick="openLightbox('2.png')">
-                    <img src="2.png" class="group-hover:scale-105 transition duration-500 w-full h-auto">
-                </div>
-                <div class="group cursor-pointer overflow-hidden rounded-xl border border-gray-700" onclick="openLightbox('3.png')">
-                    <img src="3.png" class="group-hover:scale-105 transition duration-500 w-full h-auto">
-                </div>
-                <div class="group cursor-pointer overflow-hidden rounded-xl border border-gray-700" onclick="openLightbox('4.png')">
-                    <img src="4.png" class="group-hover:scale-105 transition duration-500 w-full h-auto">
-                </div>
-                <div class="group cursor-pointer overflow-hidden rounded-xl border border-gray-700" onclick="openLightbox('5.png')">
-                    <img src="5.png" class="group-hover:scale-105 transition duration-500 w-full h-auto">
-                </div>
-                <div class="group cursor-pointer overflow-hidden rounded-xl border border-gray-700" onclick="openLightbox('6.png')">
-                    <img src="6.png" class="group-hover:scale-105 transition duration-500 w-full h-auto">
-                </div>
-            </div>
-
-            <div class="text-center max-w-3xl mx-auto italic text-gray-400">
-                "วาดสี่เหลี่ยมเพื่อกำหนด Zero จากมุม จบงานด้วยการคุยภาษาเดียวกันทั้งคนหน้าคอมและหน้าเครื่อง"
-            </div>
-        </div>
-    </section>
-
-    <section id="problem" class="bg-white text-gray-900 section px-4">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="text-3xl font-bold text-center mb-10 text-blue-900">Dead Object vs Living Object</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-gray-100 p-6 rounded-2xl border border-gray-200">
-                    <video autoplay loop muted playsinline class="w-full rounded-lg mb-4 grayscale" src="vise.mp4"></video>
-                    <h3 class="font-bold">แบบเดิม: วัตถุตายตัว</h3>
-                    <p class="text-sm text-gray-600 mt-2">แกะออกแล้วศูนย์หาย แก้ไขไม่ได้ ต้องทิ้งอย่างเดียว</p>
-                </div>
-                <div class="bg-blue-50 p-6 rounded-2xl border-2 border-blue-400">
-                    <video autoplay loop muted playsinline class="w-full rounded-lg mb-4" src="new3dprobeaa.mp4"></video>
-                    <h3 class="font-bold text-blue-900">แบบ Pivot: วัตถุมีชีวิต</h3>
-                    <p class="text-sm text-blue-800 mt-2">แกะออกใส่ใหม่ศูนย์เดิม 100% อัปเกรดชิ้นงานได้ตลอดไป</p>
+                <div>
+                    <img src="04072025PMZ8.png" alt="ภาพประกอบวัตถุตาย vs วัตถุมีชีวิต" class="rounded-xl shadow-xl border border-gray-700 w-full">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="videos" class="section px-4">
+    <section id="principles" class="section bg-gray-900 px-4">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl font-bold text-center mb-12">🎥 Demonstration</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="aspect-[9/16]"><iframe class="rounded-xl w-full h-full border border-gray-700" src="https://www.youtube.com/embed/zHc43y5YUAQ"></iframe></div>
-                <div class="aspect-[9/16]"><iframe class="rounded-xl w-full h-full border border-gray-700" src="https://www.youtube.com/embed/kY5e6HPs2k4"></iframe></div>
-                <div class="aspect-[9/16]"><iframe class="rounded-xl w-full h-full border border-gray-700" src="https://www.youtube.com/embed/mK9kF0oG3kQ"></iframe></div>
+            <h2 class="text-3xl font-bold mb-8 text-center">หลักการหลัก</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-black p-6 rounded-xl border border-gray-800">
+                    <h3 class="text-xl font-semibold mb-4">การปรับปรุงได้ 100%</h3>
+                    <p class="text-gray-400">ชิ้นงานทุกชิ้นปรับเปลี่ยนได้ทั้งหมดโดยไม่กระทบ datum หลัก</p>
+                </div>
+                <div class="bg-black p-6 rounded-xl border border-gray-800">
+                    <h3 class="text-xl font-semibold mb-4">เวลาตั้งค่าเป็นศูนย์</h3>
+                    <p class="text-gray-400">ขอบหมุนฝังตัวทำให้ตรวจสอบและใช้งานได้ทันที โดยไม่ต้อง fixture</p>
+                </div>
+                <div class="bg-black p-6 rounded-xl border border-gray-800">
+                    <h3 class="text-xl font-semibold mb-4">การทำซ้ำไม่จำกัด</h3>
+                    <p class="text-gray-400">วิวัฒนาการชิ้นงานได้อย่างต่อเนื่อง รักษาความสมบูรณ์</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="founder" class="section px-4 bg-gray-900 border-t border-gray-800 text-center">
-        <div class="container mx-auto max-w-4xl">
-            <img src="founder.png" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500 shadow-xl">
-            <h2 class="text-2xl font-bold">ปิยวัฒน์ ทองจันทร์ (ไบรอั้น)</h2>
-            <p class="text-gray-400 mb-6">Founder of The Pivot Standard</p>
-            <div class="flex justify-center gap-4">
-                <a href="tel:0851567441" class="bg-blue-600 px-6 py-2 rounded-full font-bold">📞 085-156-7441</a>
+    <section id="benefits" class="section px-4 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold mb-8 text-center">ข้อดีและผลกระทบต่อโลก</h2>
+            <p class="text-xl text-gray-400 mb-8 text-center max-w-3xl mx-auto">
+                มาตรฐานปิยวัฒน์คือภาษาใหม่ที่ถือกำเนิดในวิศวกรรม ทำให้โลกก้าวสู่การผลิตที่ยั่งยืนและมีประสิทธิภาพสูงสุด
+            </p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-black p-6 rounded-xl border border-gray-800">
+                    <h3 class="text-xl font-semibold mb-4">ลดต้นทุนและของเสีย</h3>
+                    <p class="text-gray-400">ปรับชิ้นงานเก่าให้ใหม่ได้ 100% ลดการผลิตซ้ำและมลพิษจากขยะอุตสาหกรรม</p>
+                </div>
+                <div class="bg-black p-6 rounded-xl border border-gray-800">
+                    <h3 class="text-xl font-semibold mb-4">เพิ่มนวัตกรรมและประสิทธิภาพ</h3>
+                    <p class="text-gray-400">ชิ้นงาน "มีชีวิต" ปรับตัวได้เหมือนซอฟต์แวร์ ทำให้ธุรกิจแข่งขันได้ในยุคดิจิทัล</p>
+                </div>
+                <div class="bg-black p-6 rounded-xl border border-gray-800">
+                    <h3 class="text-xl font-semibold mb-4">ประโยชน์ต่อสังคม</h3>
+                    <p class="text-gray-400">ลดการใช้ทรัพยากรโลก สนับสนุนอุตสาหกรรมสีเขียว และเปิดโอกาสให้วิศวกรรุ่นใหม่</p>
+                </div>
+                <div class="bg-black p-6 rounded-xl border border-gray-800">
+                    <h3 class="text-xl font-semibold mb-4">ภาษาใหม่สำหรับอนาคต</h3>
+                    <p class="text-gray-400">เปรียบเสมือนภาษาโปรแกรมที่ทำให้การออกแบบวิศวกรรมเป็นไดนามิก โลกจะรู้จักมันในฐานะเครื่องมือเปลี่ยนแปลงอุตสาหกรรม</p>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <section id="implementation" class="section px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold mb-8 text-center">การนำไปปฏิบัติทางเทคนิค</h2>
+            <div class="space-y-12">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-center">ตัวอย่างชิ้นงานจริงตามมาตรฐานปิยวัฒน์</h3>
+                    <p class="text-center text-gray-300 mb-6 max-w-3xl mx-auto">
+                        ภาพต่อไปนี้แสดงชิ้นงานตัวอย่างที่ออกแบบด้วยระบบ Pivot โดยมีจุดอ้างอิง (datum points) และขอบหมุนที่ฝังตัว หมายเลข 1–6 ระบุตำแหน่งสำคัญสำหรับการวัดและตั้งศูนย์ 6 จุด รวมถึงพื้นที่ datum หลัก (จุดกึ่งกลางสี่เหลี่ยมสีเทา) ที่ใช้เป็น origin
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="rounded-xl overflow-hidden shadow-2xl border border-gray-700">
+                            <img src="27.png" alt="ตัวอย่างชิ้นงาน CNC กับ datum points และ pivot frame" class="w-full h-auto">
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-2xl border border-gray-700">
+                            <img src="28.png" alt="ตัวอย่าง datum reference frame ในชิ้นงาน CNC" class="w-full h-auto">
+                        </div>
+                        <div class="rounded-xl overflow-hidden shadow-2xl border border-gray-700">
+                            <img src="29.png" alt="ตัวอย่างการ标注จุดอ้างอิงและ pivot ในแบบชิ้นงาน" class="w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">การ激活ขอบหมุน</h3>
+                    <p class="mb-4">ขอบเขตเฉพาะสำหรับตรวจสอบ ทดลอง และปรับเปลี่ยนโดยไม่กระทบโครงสร้างหลัก</p>
+                    <img src="pivot-edge.png" alt="แผนภาพการ激活ขอบหมุน" class="rounded-xl shadow-xl border border-gray-700 w-full max-w-2xl mx-auto">
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">ระบบจัดแนว 6 จุด</h3>
+                    <p class="mb-4">การกำหนด datum ทางคณิตศาสตร์เพื่อความแม่นยำสูง โดยไม่ต้อง fixture กลไก</p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <img src="1.png" alt="ขั้นตอนระบบจัดแนว 6 จุด ขั้น 1" class="rounded-xl shadow-xl border border-gray-700">
+                        <img src="2.png" alt="ขั้นตอนระบบจัดแนว 6 จุด ขั้น 2" class="rounded-xl shadow-xl border border-gray-700">
+                        <img src="3.png" alt="ขั้นตอนระบบจัดแนว 6 จุด ขั้น 3" class="rounded-xl shadow-xl border border-gray-700">
+                        <img src="4.png" alt="ขั้นตอนระบบจัดแนว 6 จุด ขั้น 4" class="rounded-xl shadow-xl border border-gray-700">
+                        <img src="5.png" alt="ขั้นตอนระบบจัดแนว 6 จุด ขั้น 5" class="rounded-xl shadow-xl border border-gray-700">
+                        <img src="6.png" alt="ขั้นตอนระบบจัดแนว 6 จุด ขั้น 6" class="rounded-xl shadow-xl border border-gray-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="demonstration" class="section bg-gray-900 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold mb-8 text-center">การสาธิต</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="aspect-video">
+                    <iframe class="w-full h-full rounded-xl border border-gray-700" src="https://www.youtube.com/embed/zHc43y5YUAQ" title="การสาธิตมาตรฐานปิยวัฒน์ 1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="aspect-video">
+                    <iframe class="w-full h-full rounded-xl border border-gray-700" src="https://www.youtube.com/embed/kY5e6HPs2k4" title="การสาธิตมาตรฐานปิยวัฒน์ 2" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="aspect-video">
+                    <iframe class="w-full h-full rounded-xl border border-gray-700" src="https://www.youtube.com/embed/mK9kF0oG3kQ" title="การสาธิตมาตรฐานปิยวัฒน์ 3" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="founder" class="section px-4 text-center">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl font-bold mb-8">ผู้ก่อตั้ง</h2>
+            <img src="founder.png" alt="ปิยวัฒน์ ทองจันทร์" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500 shadow-xl">
+            <h3 class="text-2xl font-semibold mb-2">ปิยวัฒน์ ทองจันทร์ (ไบรอั้น)</h3>
+            <p class="text-gray-400 mb-6">ผู้สร้างมาตรฐานปิยวัฒน์</p>
+            <a href="tel:0851567441" class="bg-blue-600 px-8 py-3 rounded-full font-bold text-white hover:bg-blue-500 transition inline-block">📞 085-156-7441</a>
         </div>
     </section>
 </main>
 
-<div id="lightbox" class="fixed inset-0 bg-black/95 z-[100] hidden items-center justify-center p-4" onclick="this.classList.add('hidden')">
-    <img id="lightbox-img" src="" class="max-w-full max-h-full rounded-lg shadow-2xl">
-</div>
-
-<script>
-    function openLightbox(src) {
-        document.getElementById('lightbox-img').src = src;
-        document.getElementById('lightbox').classList.remove('hidden');
-        document.getElementById('lightbox').classList.add('flex');
-    }
-</script>
+<footer class="bg-black border-t border-gray-800 py-6 text-center text-gray-500 text-sm">
+    <div class="container mx-auto">
+        <p>&copy; 2569 มาตรฐานปิยวัฒน์ สงวนลิขสิทธิ์ทั้งหมด</p>
+    </div>
+</footer>
 
 </body>
 </html>
