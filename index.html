@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="th" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>มาตรฐานปิยวัฒน์ - โปรโตคอลการออกแบบวิศวกรรมวิวัฒนาการ</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Piyawat Standard - Datum-Based Evolutionary Engineering Protocol</title>
+    
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2C778T4KC"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -11,190 +13,369 @@
       gtag('js', new Date());
       gtag('config', 'G-N2C778T4KC');
     </script>
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    
     <style>
-        body { font-family: 'Kanit', sans-serif; background-color: #0a0a0a; color: #e5e5e5; }
-        .gradient-text { background: linear-gradient(to right, #4ade80, #3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .section { padding: 4rem 1rem; }
-        .tech-term { font-weight: 600; color: #3b82f6; }
+      :root {
+        --font-th: 'Kanit', system-ui, sans-serif;
+        --font-en: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      }
+      html:lang(th) { font-family: var(--font-th); }
+      html:lang(en) { font-family: var(--font-en); }
+      
+      .th-only { display: block; }
+      html:lang(en) .th-only { display: none; }
+      .en-only { display: none; }
+      html:lang(en) .en-only { display: block; }
+      
+      body {
+        @apply bg-gray-50 text-gray-900 antialiased;
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #0ea5e9, #6366f1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .section { @apply py-16 md:py-20 lg:py-24; }
+      .card { 
+        @apply bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300; 
+      }
+      .quote-card {
+        @apply bg-indigo-50 border-l-4 border-indigo-500 p-8 rounded-2xl max-w-4xl mx-auto;
+      }
     </style>
 </head>
-<body class="antialiased">
+<body class="min-h-screen">
 
-<header class="fixed top-0 left-0 right-0 bg-black/80 backdrop-blur-md z-50 border-b border-gray-800">
-    <div class="container mx-auto max-w-6xl px-4 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold gradient-text">มาตรฐานปิยวัฒน์</h1>
-        <nav class="flex gap-6">
-            <a href="#overview" class="text-gray-300 hover:text-white">ภาพรวม</a>
-            <a href="#principles" class="text-gray-300 hover:text-white">หลักการ</a>
-            <a href="#benefits" class="text-gray-300 hover:text-white">ข้อดี</a>
-            <a href="#implementation" class="text-gray-300 hover:text-white">การนำไปใช้</a>
-            <a href="#demonstration" class="text-gray-300 hover:text-white">การสาธิต</a>
-            <a href="#founder" class="text-gray-300 hover:text-white">ผู้ก่อตั้ง</a>
-            <a href="index.html" class="text-gray-300 hover:text-white">English</a>
-        </nav>
+<!-- Header (ไม่เปลี่ยนแปลง) -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+    <h1 class="text-2xl md:text-3xl font-semibold gradient-text">
+      <span class="th-only">มาตรฐานปิยวัฒน์</span>
+      <span class="en-only">Piyawat Standard</span>
+    </h1>
+    
+    <nav class="hidden md:flex items-center gap-8">
+      <a href="#overview" class="text-gray-700 hover:text-indigo-600 font-medium transition">
+        <span class="th-only">ภาพรวม</span><span class="en-only">Overview</span>
+      </a>
+      <a href="#principles" class="text-gray-700 hover:text-indigo-600 font-medium transition">
+        <span class="th-only">หลักการ</span><span class="en-only">Principles</span>
+      </a>
+      <a href="#benefits" class="text-gray-700 hover:text-indigo-600 font-medium transition">
+        <span class="th-only">ข้อดี</span><span class="en-only">Benefits</span>
+      </a>
+      <a href="#implementation" class="text-gray-700 hover:text-indigo-600 font-medium transition">
+        <span class="th-only">การนำไปใช้</span><span class="en-only">Implementation</span>
+      </a>
+      <a href="#demonstration" class="text-gray-700 hover:text-indigo-600 font-medium transition">
+        <span class="th-only">การสาธิต</span><span class="en-only">Demonstration</span>
+      </a>
+      <a href="#founder" class="text-gray-700 hover:text-indigo-600 font-medium transition">
+        <span class="th-only">ผู้ก่อตั้ง</span><span class="en-only">Founder</span>
+      </a>
+    </nav>
+    
+    <!-- Language Switcher -->
+    <div class="flex items-center gap-2">
+      <button onclick="document.documentElement.lang='en'; localStorage.setItem('lang', 'en');" 
+              class="px-3 py-1.5 text-sm font-medium rounded-lg hover:bg-indigo-50 transition">
+        EN
+      </button>
+      <button onclick="document.documentElement.lang='th'; localStorage.setItem('lang', 'th');" 
+              class="px-3 py-1.5 text-sm font-medium rounded-lg hover:bg-indigo-50 transition">
+        TH
+      </button>
     </div>
+  </div>
 </header>
 
-<main class="pt-20">
-    <section id="hero" class="section text-center bg-gradient-to-b from-black to-gray-900">
-        <div class="container mx-auto max-w-4xl">
-            <h1 class="text-5xl md:text-7xl font-bold mb-4 leading-tight">
-                มาตรฐานปิยวัฒน์: <span class="gradient-text">ภาษาใหม่ในวิศวกรรมการออกแบบ Datum-Based Evolutionary</span>
-            </h1>
-            <p class="text-xl text-gray-400 mb-8 max-w-3xl mx-auto">
-                ภาษาใหม่นี้ได้ถือกำเนิดแล้ว! มันปฏิวัติการผลิต CNC โดยทำให้ชิ้นงานมีชีวิตชีวา ปรับปรุงได้ 100%, ตั้งค่าเวลาเป็นศูนย์ และวิวัฒนาการไร้ขีดจำกัด
-            </p>
-            <a href="#overview" class="bg-blue-600 px-8 py-3 rounded-full font-bold text-white hover:bg-blue-500 transition">เรียนรู้เพิ่มเติม</a>
-        </div>
-    </section>
-
-    <section id="overview" class="section px-4">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl font-bold mb-8 text-center">ภาพรวมโปรโตคอล</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4">วัตถุตาย vs วัตถุมีชีวิต</h3>
-                    <p class="mb-4">
-                        วิศวกรรมแบบดั้งเดิมสร้าง <span class="tech-term">วัตถุตาย</span> ซึ่งมี datum คงที่ ทำให้ปรับเปลี่ยนยากและเกิดของเสียสูง
-                    </p>
-                    <p>
-                        มาตรฐานปิยวัฒน์สร้าง <span class="tech-term">วัตถุมีชีวิต</span> ด้วย <span class="tech-term">จุดหมุน</span> และ <span class="tech-term">ขอบหมุน</span> ที่ฝังตัว ทำให้ชิ้นงานวิวัฒนาการได้อย่างต่อเนื่อง โดยรักษาความแม่นยำ
-                    </p>
-                </div>
-                <div>
-                    <img src="04072025PMZ8.png" alt="ภาพประกอบวัตถุตาย vs วัตถุมีชีวิต" class="rounded-xl shadow-xl border border-gray-700 w-full">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="principles" class="section bg-gray-900 px-4">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl font-bold mb-8 text-center">หลักการหลัก</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-black p-6 rounded-xl border border-gray-800">
-                    <h3 class="text-xl font-semibold mb-4">การปรับปรุงได้ 100%</h3>
-                    <p class="text-gray-400">ชิ้นงานทุกชิ้นปรับเปลี่ยนได้ทั้งหมดโดยไม่กระทบ datum หลัก</p>
-                </div>
-                <div class="bg-black p-6 rounded-xl border border-gray-800">
-                    <h3 class="text-xl font-semibold mb-4">เวลาตั้งค่าเป็นศูนย์</h3>
-                    <p class="text-gray-400">ขอบหมุนฝังตัวทำให้ตรวจสอบและใช้งานได้ทันที โดยไม่ต้อง fixture</p>
-                </div>
-                <div class="bg-black p-6 rounded-xl border border-gray-800">
-                    <h3 class="text-xl font-semibold mb-4">การทำซ้ำไม่จำกัด</h3>
-                    <p class="text-gray-400">วิวัฒนาการชิ้นงานได้อย่างต่อเนื่อง รักษาความสมบูรณ์</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="benefits" class="section px-4 bg-gradient-to-b from-gray-900 to-black">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl font-bold mb-8 text-center">ข้อดีและผลกระทบต่อโลก</h2>
-            <p class="text-xl text-gray-400 mb-8 text-center max-w-3xl mx-auto">
-                มาตรฐานปิยวัฒน์คือภาษาใหม่ที่ถือกำเนิดในวิศวกรรม ทำให้โลกก้าวสู่การผลิตที่ยั่งยืนและมีประสิทธิภาพสูงสุด
-            </p>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-black p-6 rounded-xl border border-gray-800">
-                    <h3 class="text-xl font-semibold mb-4">ลดต้นทุนและของเสีย</h3>
-                    <p class="text-gray-400">ปรับชิ้นงานเก่าให้ใหม่ได้ 100% ลดการผลิตซ้ำและมลพิษจากขยะอุตสาหกรรม</p>
-                </div>
-                <div class="bg-black p-6 rounded-xl border border-gray-800">
-                    <h3 class="text-xl font-semibold mb-4">เพิ่มนวัตกรรมและประสิทธิภาพ</h3>
-                    <p class="text-gray-400">ชิ้นงาน "มีชีวิต" ปรับตัวได้เหมือนซอฟต์แวร์ ทำให้ธุรกิจแข่งขันได้ในยุคดิจิทัล</p>
-                </div>
-                <div class="bg-black p-6 rounded-xl border border-gray-800">
-                    <h3 class="text-xl font-semibold mb-4">ประโยชน์ต่อสังคม</h3>
-                    <p class="text-gray-400">ลดการใช้ทรัพยากรโลก สนับสนุนอุตสาหกรรมสีเขียว และเปิดโอกาสให้วิศวกรรุ่นใหม่</p>
-                </div>
-                <div class="bg-black p-6 rounded-xl border border-gray-800">
-                    <h3 class="text-xl font-semibold mb-4">ภาษาใหม่สำหรับอนาคต</h3>
-                    <p class="text-gray-400">เปรียบเสมือนภาษาโปรแกรมที่ทำให้การออกแบบวิศวกรรมเป็นไดนามิก โลกจะรู้จักมันในฐานะเครื่องมือเปลี่ยนแปลงอุตสาหกรรม</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="implementation" class="section px-4">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl font-bold mb-8 text-center">การนำไปปฏิบัติทางเทคนิค</h2>
-            <div class="space-y-12">
-                <div>
-                    <h3 class="text-2xl font-semibold mb-6 text-center">ตัวอย่างชิ้นงานจริงตามมาตรฐานปิยวัฒน์</h3>
-                    <p class="text-center text-gray-300 mb-6 max-w-3xl mx-auto">
-                        ภาพต่อไปนี้แสดงชิ้นงานตัวอย่างที่ออกแบบด้วยระบบ Pivot โดยมีจุดอ้างอิง (datum points) และขอบหมุนที่ฝังตัว หมายเลข 1–6 ระบุตำแหน่งสำคัญสำหรับการวัดและตั้งศูนย์ 6 จุด รวมถึงพื้นที่ datum หลัก (จุดกึ่งกลางสี่เหลี่ยมสีเทา) ที่ใช้เป็น origin
-                    </p>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <div class="rounded-xl overflow-hidden shadow-2xl border border-gray-700">
-                            <img src="27.png" alt="ตัวอย่างชิ้นงาน CNC กับ datum points และ pivot frame" class="w-full h-auto">
-                        </div>
-                        <div class="rounded-xl overflow-hidden shadow-2xl border border-gray-700">
-                            <img src="28.png" alt="ตัวอย่าง datum reference frame ในชิ้นงาน CNC" class="w-full h-auto">
-                        </div>
-                        <div class="rounded-xl overflow-hidden shadow-2xl border border-gray-700">
-                            <img src="29.png" alt="ตัวอย่างการ标注จุดอ้างอิงและ pivot ในแบบชิ้นงาน" class="w-full h-auto">
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4">การ激活ขอบหมุน</h3>
-                    <p class="mb-4">ขอบเขตเฉพาะสำหรับตรวจสอบ ทดลอง และปรับเปลี่ยนโดยไม่กระทบโครงสร้างหลัก</p>
-                    <img src="pivot-edge.png" alt="แผนภาพการ激活ขอบหมุน" class="rounded-xl shadow-xl border border-gray-700 w-full max-w-2xl mx-auto">
-                </div>
-
-                <div>
-                    <h3 class="text-2xl font-semibold mb-4">ระบบจัดแนว 6 จุด</h3>
-                    <p class="mb-4">การกำหนด datum ทางคณิตศาสตร์เพื่อความแม่นยำสูง โดยไม่ต้อง fixture กลไก</p>
-                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                        <img src="1.png" alt="ขั้นตอนระบบจัดแนว 6 จุด ขั้น 1" class="rounded-xl shadow-xl border border-gray-700">
-                        <img src="2.png" alt="ขั้นตอนระบบจัดแนว 6 จุด ขั้น 2" class="rounded-xl shadow-xl border border-gray-700">
-                        <img src="3.png" alt="ขั้นตอนระบบจัดแนว 6 จุด ขั้น 3" class="rounded-xl shadow-xl border border-gray-700">
-                        <img src="4.png" alt="ขั้นตอนระบบจัดแนว 6 จุด ขั้น 4" class="rounded-xl shadow-xl border border-gray-700">
-                        <img src="5.png" alt="ขั้นตอนระบบจัดแนว 6 จุด ขั้น 5" class="rounded-xl shadow-xl border border-gray-700">
-                        <img src="6.png" alt="ขั้นตอนระบบจัดแนว 6 จุด ขั้น 6" class="rounded-xl shadow-xl border border-gray-700">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="demonstration" class="section bg-gray-900 px-4">
-        <div class="container mx-auto max-w-6xl">
-            <h2 class="text-3xl font-bold mb-8 text-center">การสาธิต</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="aspect-video">
-                    <iframe class="w-full h-full rounded-xl border border-gray-700" src="https://www.youtube.com/embed/zHc43y5YUAQ" title="การสาธิตมาตรฐานปิยวัฒน์ 1" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="aspect-video">
-                    <iframe class="w-full h-full rounded-xl border border-gray-700" src="https://www.youtube.com/embed/kY5e6HPs2k4" title="การสาธิตมาตรฐานปิยวัฒน์ 2" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <div class="aspect-video">
-                    <iframe class="w-full h-full rounded-xl border border-gray-700" src="https://www.youtube.com/embed/mK9kF0oG3kQ" title="การสาธิตมาตรฐานปิยวัฒน์ 3" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="founder" class="section px-4 text-center">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl font-bold mb-8">ผู้ก่อตั้ง</h2>
-            <img src="founder.png" alt="ปิยวัฒน์ ทองจันทร์" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500 shadow-xl">
-            <h3 class="text-2xl font-semibold mb-2">ปิยวัฒน์ ทองจันทร์ (ไบรอั้น)</h3>
-            <p class="text-gray-400 mb-6">ผู้สร้างมาตรฐานปิยวัฒน์</p>
-            <a href="tel:0851567441" class="bg-blue-600 px-8 py-3 rounded-full font-bold text-white hover:bg-blue-500 transition inline-block">📞 085-156-7441</a>
-        </div>
-    </section>
-</main>
-
-<footer class="bg-black border-t border-gray-800 py-6 text-center text-gray-500 text-sm">
-    <div class="container mx-auto">
-        <p>&copy; 2569 มาตรฐานปิยวัฒน์ สงวนลิขสิทธิ์ทั้งหมด</p>
+<!-- Hero (ไม่เปลี่ยนแปลง) -->
+<section id="hero" class="pt-32 pb-20 md:pt-40 md:pb-32 text-center bg-gradient-to-br from-white via-gray-50 to-indigo-50/40">
+  <div class="max-w-5xl mx-auto px-6">
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+      <span class="th-only">มาตรฐานปิยวัฒน์:</span>
+      <span class="en-only">Piyawat Standard:</span><br class="hidden sm:block"/>
+      <span class="gradient-text">Datum-Based Evolutionary Engineering</span>
+    </h1>
+    <p class="mt-6 text-lg sm:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+      <span class="th-only">ภาษาใหม่ในวิศวกรรมการออกแบบที่ทำให้ชิ้นงานมีชีวิต ปรับปรุงได้ 100% ตั้งค่าเวลาเป็นศูนย์ และวิวัฒนาการได้ไม่จำกัด</span>
+      <span class="en-only">A new engineering design language that brings components to life — fully adjustable, zero setup time, and unlimited evolutionary adaptation</span>
+    </p>
+    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+      <a href="#overview" class="inline-block bg-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-indigo-700 transition shadow-md">
+        <span class="th-only">เรียนรู้เพิ่มเติม</span>
+        <span class="en-only">Learn More</span>
+      </a>
+      <a href="#demonstration" class="inline-block bg-white text-indigo-700 px-8 py-4 rounded-xl font-semibold border border-indigo-200 hover:bg-indigo-50 transition">
+        <span class="th-only">ดูการสาธิต</span>
+        <span class="en-only">Watch Demo</span>
+      </a>
     </div>
+  </div>
+</section>
+
+<!-- Overview (ไม่เปลี่ยนแปลง) -->
+<section id="overview" class="section bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+      <span class="th-only">ภาพรวมโปรโตคอล</span>
+      <span class="en-only">Protocol Overview</span>
+    </h2>
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <h3 class="text-2xl font-semibold mb-6">
+          <span class="th-only">วัตถุตาย vs วัตถุมีชีวิต</span>
+          <span class="en-only">Dead Objects vs Living Objects</span>
+        </h3>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          <span class="th-only">วิศวกรรมแบบดั้งเดิมสร้างวัตถุตายที่มี datum คงที่ ทำให้การปรับเปลี่ยนยากและเกิดของเสียสูง</span>
+          <span class="en-only">Conventional engineering produces static “dead” objects with fixed datums, resulting in difficult modifications and high waste.</span>
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          <span class="th-only">มาตรฐานปิยวัฒน์สร้างวัตถุมีชีวิตด้วยจุดหมุนและขอบหมุนที่ฝังในชิ้นงาน ทำให้สามารถวิวัฒนาการได้ต่อเนื่องโดยยังคงความแม่นยำสูงสุด</span>
+          <span class="en-only">The Piyawat Standard creates “living” objects with embedded pivot points and adaptive edges, enabling continuous evolution while maintaining maximum precision.</span>
+        </p>
+      </div>
+      <div>
+        <img src="04072025PMZ8.png" alt="Comparison of dead vs living objects" class="rounded-2xl shadow-md border border-gray-200 w-full"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Principles (ไม่เปลี่ยนแปลง) -->
+<section id="principles" class="section bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+      <span class="th-only">หลักการหลัก</span>
+      <span class="en-only">Core Principles</span>
+    </h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="card p-8">
+        <h3 class="text-xl font-semibold mb-4 text-indigo-700">
+          <span class="th-only">ปรับปรุงได้ 100%</span>
+          <span class="en-only">100% Adjustable</span>
+        </h3>
+        <p class="text-gray-600">
+          <span class="th-only">ชิ้นงานทุกชิ้นสามารถปรับเปลี่ยนได้ทั้งหมดโดยไม่กระทบ datum หลัก</span>
+          <span class="en-only">Every part can be fully modified without affecting the primary datum.</span>
+        </p>
+      </div>
+      <div class="card p-8">
+        <h3 class="text-xl font-semibold mb-4 text-indigo-700">
+          <span class="th-only">เวลาตั้งค่าเป็นศูนย์</span>
+          <span class="en-only">Zero Setup Time</span>
+        </h3>
+        <p class="text-gray-600">
+          <span class="th-only">ขอบหมุนฝังตัวทำให้ตรวจสอบและใช้งานได้ทันทีโดยไม่ต้องใช้ fixture</span>
+          <span class="en-only">Embedded adaptive edges allow immediate inspection and use without fixtures.</span>
+        </p>
+      </div>
+      <div class="card p-8">
+        <h3 class="text-xl font-semibold mb-4 text-indigo-700">
+          <span class="th-only">การทำซ้ำไม่จำกัด</span>
+          <span class="en-only">Unlimited Iteration</span>
+        </h3>
+        <p class="text-gray-600">
+          <span class="th-only">วิวัฒนาการชิ้นงานได้อย่างต่อเนื่องโดยรักษาความสมบูรณ์ของโครงสร้าง</span>
+          <span class="en-only">Continuous evolution of parts while preserving structural integrity.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits (ไม่เปลี่ยนแปลง) -->
+<section id="benefits" class="section bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+      <span class="th-only">ข้อดีและผลกระทบ</span>
+      <span class="en-only">Benefits & Impact</span>
+    </h2>
+    <p class="text-xl text-gray-600 text-center mb-12 max-w-4xl mx-auto">
+      <span class="th-only">มาตรฐานปิยวัฒน์เป็นภาษาใหม่ที่เปลี่ยนแปลงวิธีการผลิตให้ยั่งยืนและมีประสิทธิภาพสูงสุด</span>
+      <span class="en-only">Piyawat Standard introduces a new language that transforms manufacturing into a sustainable, high-efficiency paradigm.</span>
+    </p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="card p-8">
+        <h3 class="text-xl font-semibold mb-4">
+          <span class="th-only">ลดต้นทุนและของเสีย</span>
+          <span class="en-only">Cost & Waste Reduction</span>
+        </h3>
+        <p class="text-gray-600">
+          <span class="th-only">ปรับชิ้นงานเก่าให้ใหม่ได้ 100% ลดการผลิตซ้ำและมลพิษ</span>
+          <span class="en-only">100% reuse of existing parts, minimizing remanufacturing and industrial waste.</span>
+        </p>
+      </div>
+      <div class="card p-8">
+        <h3 class="text-xl font-semibold mb-4">
+          <span class="th-only">เพิ่มนวัตกรรม</span>
+          <span class="en-only">Accelerated Innovation</span>
+        </h3>
+        <p class="text-gray-600">
+          <span class="th-only">ชิ้นงานปรับตัวได้เหมือนซอฟต์แวร์ ช่วยให้ธุรกิจแข่งขันในยุคดิจิทัล</span>
+          <span class="en-only">Parts adapt like software, enabling digital-era competitiveness.</span>
+        </p>
+      </div>
+      <div class="card p-8">
+        <h3 class="text-xl font-semibold mb-4">
+          <span class="th-only">ประโยชน์ต่อสังคม</span>
+          <span class="en-only">Societal Benefits</span>
+        </h3>
+        <p class="text-gray-600">
+          <span class="th-only">ลดการใช้ทรัพยากร สนับสนุนอุตสาหกรรมสีเขียว</span>
+          <span class="en-only">Conserves global resources and supports green industry initiatives.</span>
+        </p>
+      </div>
+      <div class="card p-8">
+        <h3 class="text-xl font-semibold mb-4">
+          <span class="th-only">ภาษาของอนาคต</span>
+          <span class="en-only">Language of the Future</span>
+        </h3>
+        <p class="text-gray-600">
+          <span class="th-only">เปลี่ยนการออกแบบวิศวกรรมให้เป็นระบบไดนามิก</span>
+          <span class="en-only">Transforms engineering design into a dynamic, programmable system.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Implementation (ไม่เปลี่ยนแปลง) -->
+<section id="implementation" class="section bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+      <span class="th-only">การนำไปปฏิบัติทางเทคนิค</span>
+      <span class="en-only">Technical Implementation</span>
+    </h2>
+    
+    <div class="space-y-16">
+      <div>
+        <h3 class="text-2xl font-semibold text-center mb-8">
+          <span class="th-only">ตัวอย่างชิ้นงานตามมาตรฐานปิยวัฒน์</span>
+          <span class="en-only">Examples of Piyawat-Standard Parts</span>
+        </h3>
+        <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
+          <span class="th-only">ภาพแสดงชิ้นงานที่มีจุดอ้างอิงและขอบหมุนฝังตัว ระบบ 6 จุดสำหรับการจัดแนวแม่นยำ</span>
+          <span class="en-only">Illustrations of parts featuring embedded datum points and pivot edges with 6-point alignment system.</span>
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <img src="27.png" alt="Piyawat standard part example 1" class="rounded-2xl shadow-md w-full"/>
+          <img src="28.png" alt="Piyawat standard part example 2" class="rounded-2xl shadow-md w-full"/>
+          <img src="29.png" alt="Piyawat standard part example 3" class="rounded-2xl shadow-md w-full"/>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <h3 class="text-2xl font-semibold mb-6">
+          <span class="th-only">การ激活ขอบหมุน</span>
+          <span class="en-only">Activating Adaptive Edges</span>
+        </h3>
+        <img src="pivot-edge.png" alt="Adaptive edge activation diagram" class="rounded-2xl shadow-md max-w-4xl mx-auto w-full"/>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-semibold text-center mb-8">
+          <span class="th-only">ระบบจัดแนว 6 จุด</span>
+          <span class="en-only">6-Point Alignment System</span>
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <img src="1.png" alt="6-point step 1" class="rounded-xl shadow-md"/>
+          <img src="2.png" alt="6-point step 2" class="rounded-xl shadow-md"/>
+          <img src="3.png" alt="6-point step 3" class="rounded-xl shadow-md"/>
+          <img src="4.png" alt="6-point step 4" class="rounded-xl shadow-md"/>
+          <img src="5.png" alt="6-point step 5" class="rounded-xl shadow-md"/>
+          <img src="6.png" alt="6-point step 6" class="rounded-xl shadow-md"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Demonstration - เพิ่ม 3 วิดีโอใหม่ ต่อจากเดิม 2 อัน -->
+<section id="demonstration" class="section bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">
+      <span class="th-only">การสาธิต</span>
+      <span class="en-only">Demonstrations</span>
+    </h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- วิดีโอเดิม 1 -->
+      <div class="aspect-video">
+        <iframe class="w-full h-full rounded-2xl border border-gray-200 shadow-md" src="https://www.youtube.com/embed/f9x59gIhqxU" title="Piyawat Standard Demonstration" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <!-- วิดีโอเดิม 2 -->
+      <div class="aspect-video">
+        <iframe class="w-full h-full rounded-2xl border border-gray-200 shadow-md" src="https://www.youtube.com/embed/MT86fhXfzqU" title="CNC Innovation Thailand" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <!-- วิดีโอใหม่ 1 -->
+      <div class="aspect-video">
+        <iframe class="w-full h-full rounded-2xl border border-gray-200 shadow-md" src="https://www.youtube.com/embed/olbkcELDh1Q" title="CNC animation เครื่อง CNC อัจฉริยะ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <!-- วิดีโอใหม่ 2 -->
+      <div class="aspect-video">
+        <iframe class="w-full h-full rounded-2xl border border-gray-200 shadow-md" src="https://www.youtube.com/embed/t0IpqwsryZo" title="กระบวนการใช้งานเครื่องซีเอ็นซี - ปิยวัฒน์ ทองจันทร์" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <!-- วิดีโอใหม่ 3 -->
+      <div class="aspect-video">
+        <iframe class="w-full h-full rounded-2xl border border-gray-200 shadow-md" src="https://www.youtube.com/embed/E3jx-xHxZwI" title="Piyawat Standard Additional Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Founder (ไม่เปลี่ยนแปลง) -->
+<section id="founder" class="section bg-gray-50 text-center">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-bold mb-12">
+      <span class="th-only">ผู้ก่อตั้ง</span>
+      <span class="en-only">Founder</span>
+    </h2>
+    <img src="founder.png" alt="Piyawat Thongchan" class="w-40 h-40 rounded-full mx-auto mb-8 border-4 border-indigo-200 shadow-md object-cover"/>
+    <h3 class="text-2xl font-semibold mb-2">ปิยวัฒน์ ทองจันทร์ (ไบรอั้น)</h3>
+    <p class="text-gray-600 mb-8">
+      <span class="th-only">ผู้สร้างมาตรฐานปิยวัฒน์</span>
+      <span class="en-only">Creator of the Piyawat Standard</span>
+    </p>
+    <a href="mailto:higun043@gmail.com" class="inline-block bg-indigo-600 text-white px-10 py-4 rounded-xl font-semibold hover:bg-indigo-700 transition shadow-md">
+      higun043@gmail.com
+    </a>
+  </div>
+</section>
+
+<!-- Quote Section (ไม่เปลี่ยนแปลง) -->
+<section id="quote" class="section bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="quote-card">
+      <blockquote class="text-2xl md:text-3xl font-medium text-indigo-900 leading-relaxed text-center mb-6">
+        <span class="th-only">“ผมจะสอนในเรื่องของสันติภาพมากกว่าเรื่องของสงคราม และผมจะปลูกฝังความรักมากกว่าความเกลียดชัง”</span>
+        <span class="en-only">“I would teach peace rather than war, love rather than hate.”</span>
+      </blockquote>
+      <p class="text-right text-indigo-700 font-semibold">
+        — อัลเบิร์ต ไอน์สไตน์ / Albert Einstein
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer (ไม่เปลี่ยนแปลง) -->
+<footer class="bg-white border-t border-gray-200 py-8 text-center text-gray-600 text-sm">
+  <div class="max-w-7xl mx-auto px-6">
+    <p>© 2568–2569 มาตรฐานปิยวัฒน์ / Piyawat Standard. All rights reserved.</p>
+  </div>
 </footer>
+
+<!-- Language persistence -->
+<script>
+  const savedLang = localStorage.getItem('lang') || 'th';
+  document.documentElement.lang = savedLang;
+</script>
 
 </body>
 </html>
